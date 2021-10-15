@@ -1,0 +1,3 @@
+you can use the ``service_coordinator.run_service_coordinator()`` function:
+
+.. autofunction:: service_coordinator.run_service_coordinator
