@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Service coordinator Package &#8212; Blockchain simulator 1.0 documentation</title>
+    <title>Middleware Coordinator &#8212; Blockchain simulator 1.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -15,12 +15,12 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Welcome to blockchain’s documentation!" href="opencloser.html" />
+    <link rel="next" title="Service Blockchain Package" href="blockchain.html" />
     <link rel="prev" title="Welcome to blockchain’s documentation!" href="index.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="index.html">
           <span>Blockchain simulator 1.0 documentation</span></a></h1>
-        <h2 class="heading"><span>Service coordinator Package</span></h2>
+        <h2 class="heading"><span>Middleware Coordinator</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
       
@@ -29,16 +29,110 @@
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="opencloser.html">Welcome to blockchain’s documentation!</a>&#160;&#160;»
+        <a href="blockchain.html">Service Blockchain Package</a>&#160;&#160;»
         </p>
 
       </div>
       <div class="content" role="main">
         
         
-  <span class="target" id="module-service_coordinator"></span><section id="service-coordinator-package">
+  <span class="target" id="module-middleware"></span><section id="middleware-coordinator">
+<h1>Middleware Coordinator<a class="headerlink" href="#middleware-coordinator" title="Permalink to this headline">¶</a></h1>
+<p>This module has functions that coordinate all the blockchain system</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="middleware.Middleware">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">middleware.</span></span><span class="sig-name descname"><span class="pre">Middleware</span></span><a class="headerlink" href="#middleware.Middleware" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class register the required web service to 
+coordinate all the functions of CryptoSD:Blockchain</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="middleware.Middleware.add_web_service">
+<span class="sig-name descname"><span class="pre">add_web_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.add_web_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function allows the middleware add new web service
+with a minimum of information belongs to each web service
+in the dictionary
+:param name: the name or key of the web service
+:type name: str
+:param url: the url where the web service is or will be host
+:type url: str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="middleware.Middleware.consult_found_block_chain_service">
+<span class="sig-name descname"><span class="pre">consult_found_block_chain_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.consult_found_block_chain_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function allow consume consult_found blockchain service that use the method POST
+:param dict_paramteres: this parameter hava all parameters for use the service blockchain
+:type dict_paramteres: dict
+:returns: this function return a response with format JSON
+:rtype: dict[str, Any]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="middleware.Middleware.consume_service">
+<span class="sig-name descname"><span class="pre">consume_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict_parameter</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.consume_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is used to consume a web service, and return a response, no matter
+if the communication fails
+:param type_method: the method where is going to pass the communication (POST/GET)
+:type param: str
+:param uri: the url where is located the web service to consume
+:type uri: str
+:param dict_parameter: the content of the payload
+:type dict_parameter: dict
+:returns: returns a custom dict with the url, status and content. The “Any” return is a JSON content
+:rtype: dict[str, Any]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="middleware.Middleware.load_services">
+<span class="sig-name descname"><span class="pre">load_services</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.load_services" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function execute with the instance 
+of Middleware, so allows to add the principals web services</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<span class="target" id="module-controller"></span><section id="coordinator-controller">
+<h1>Coordinator controller<a class="headerlink" href="#coordinator-controller" title="Permalink to this headline">¶</a></h1>
+<p>This module perform like someone who makes
+the mainstage for all the components</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="controller.Controller">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">controller.</span></span><span class="sig-name descname"><span class="pre">Controller</span></span><a class="headerlink" href="#controller.Controller" title="Permalink to this definition">¶</a></dt>
+<dd><p>This controller uwu</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="controller.Controller.consult_founds">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">consult_founds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.consult_founds" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function consume a service from Blockchain
+to get the money in a wallet, only if this wallet
+is valid
+:param account: the wallet of the user
+:type account: str
+:returns: a dictionary with the account, founds in 
+the wallet and the exist of the account
+:rtype: dict</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<span class="target" id="module-service_coordinator"></span><section id="service-coordinator-package">
 <h1>Service coordinator Package<a class="headerlink" href="#service-coordinator-package" title="Permalink to this headline">¶</a></h1>
 <p>This a package that contains the main function for the service coordinator</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="service_coordinator.consult_founds">
+<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">consult_founds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.consult_founds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Web service for the client, that execute the required proccess,
+calling all the correspond web service from the others components
+to get the user founds in the wallet
+:endpoints: <a class="reference external" href="http://127.0.0.1/consult_founds">http://127.0.0.1/consult_founds</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="service_coordinator.get_something">
+<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">get_something</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.get_something" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main page</p>
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.run_service_coordinator">
 <span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">run_service_coordinator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.run_service_coordinator" title="Permalink to this definition">¶</a></dt>
@@ -54,8 +148,20 @@ allow comunicate diferents services</p>
 </dl>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="service_coordinator.transaction_register">
+<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">transaction_register</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.transaction_register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Web service for the client, that execute all the required proccess
+to valid a transaction and add to the block the new transaction,
+before add the complete block to the blockchain
+:endpoints: <a class="reference external" href="http://127.0.0.1/register_transaction">http://127.0.0.1/register_transaction</a></p>
+</dd></dl>
+
 </section>
-<span class="target" id="module-main_coordinator"></span><dl class="py function">
+<span class="target" id="module-main_coordinator"></span><section id="main-coordinator">
+<h1>Main coordinator<a class="headerlink" href="#main-coordinator" title="Permalink to this headline">¶</a></h1>
+<p>This module run the coordinator app</p>
+<dl class="py function">
 <dt class="sig sig-object py" id="main_coordinator.main">
 <span class="sig-prename descclassname"><span class="pre">main_coordinator.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_coordinator.main" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function allows the user to start the app
@@ -63,6 +169,7 @@ with or without debug mode, and put the ip and port
 of the coordinator app</p>
 </dd></dl>
 
+</section>
 
 
       </div>
@@ -73,7 +180,7 @@ of the coordinator app</p>
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="opencloser.html">Welcome to blockchain’s documentation!</a>&#160;&#160;»
+        <a href="blockchain.html">Service Blockchain Package</a>&#160;&#160;»
         </p>
 
       </div>

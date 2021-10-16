@@ -12,9 +12,10 @@ Welcome to blockchain's documentation!
    :caption: Contents:
 
    coordinator
+   blockchain
    opencloser
    register
-   blockchain
+   
 
    
 

@@ -1,4 +1,15 @@
-.. automodule:: service_coordinator 
+.. automodule:: middleware
    :members:
-.. automodule:: main_coordinator 
+
+.. automodule:: controller
    :members:
+
+.. automodule:: service_coordinator
+   :members:
+
+.. automodule:: main_coordinator
+   :members:
+
+
+
+
