@@ -12,7 +12,9 @@ class Block():
     This class contains the block who's going to add in the blockchain
     when the transactions has three records with valid money transferences
     '''
-    def __init__(self, number_block:int, nonce:int, transactions:list, hash_preview, hash):
+    number_block_static = 0
+
+    def __init__(self, nonce:int = 0, transactions:list = [], hash_preview = "", hash = ""):
         '''
         The constructor of the block
         :param number_block: the current number of the block
@@ -26,20 +28,31 @@ class Block():
         :param hash: the hash of the current block
         :type hash: hash
         '''
-        self.number_block = number_block
+        self.number_block = self.number_block_static
         self.nonce = nonce
         self.transactions:list = transactions
         self.hash_preview = hash_preview
         self.hash = hash
+        Block.number_block_static +=1
     
+    def __str__(self):
+        return {
+                'bloque':self.number_block,
+                'nonce':self.nonce,
+                'transactions':self.transactions,
+                'hash_preview':self.hash_preview,
+                'hash':self.hash
+                }
+        
+
     def add_transaction(self, transaction:Transaction):
         '''
         This function adds the transaction to the block
         :param transaction: receives the object Transaction
         :type transaction: Object<Transaction>
         '''
-        if self.count_transactions() <= 3:
-            self.transactions.append(transaction)
+        
+        self.transactions.append(transaction.__dict__)
 
     
     def count_transactions(self):

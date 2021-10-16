@@ -25,6 +25,10 @@ class Transaction():
         self.to_u = to_u
         self.amount = amount
 
+    def __str__(self):
+
+        return {'from_wallet':self.from_u,'to_wallet':self.to_u,'amount':self.amount}
+
     def get_amount(self):
         '''
         This function allows to get the money of a transaction

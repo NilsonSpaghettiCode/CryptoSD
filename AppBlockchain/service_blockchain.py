@@ -7,7 +7,7 @@ This a package that contains the main function for the service blockchain
 
 from blockchain import Blockchain
 from transaction import Transaction
-from flask import Flask, jsonify, request
+from flask import Flask, json, jsonify, request
   
 app = Flask(__name__)
 blockchain_s = Blockchain()
@@ -22,9 +22,13 @@ def register_data():
     '''
     if(request.method == 'POST'):
         new_transaction = Transaction(request.form['from_wallet'],request.form['to_wallet'],request.form['amount'])
-        blockchain_s.register_transaction_block(new_transaction)
-        return jsonify({'data': 'Nilson puto'})
-  
+        return blockchain_s.register_transaction_block(new_transaction)
+
+@app.route('/')
+def block_chain():
+    return blockchain_s.__str__()
+
+
 @app.route('/consult_address', methods = ['POST'])
 def consult_address():
     '''
@@ -33,6 +37,7 @@ def consult_address():
     url: http://127.0.0.1:5002/consult_address
     '''
     if (request.method == 'POST'):
+        #blockchain_s
         return jsonify({'data': 'Nilson puto'})
   
 def run_services_blockchain(ip, port):
