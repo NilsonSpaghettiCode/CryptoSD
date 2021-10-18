@@ -18,7 +18,7 @@ def register_data():
     This web service add the transaction to the
     block, and then when the block is full, the block is 
     aggregated to the blockchain
-    url: http://127.0.0.1:5002/register_transaction/<from,to,amount>
+    url: http://127.0.0.1:5002/register_data/
     '''
     if(request.method == 'POST'):
         new_transaction = Transaction(request.form['from_wallet'],request.form['to_wallet'],request.form['amount'])
@@ -26,6 +26,10 @@ def register_data():
 
 @app.route('/')
 def block_chain():
+    '''
+    This web service show the blockchain
+    url: http://127.0.0.1:5002/
+    '''
     return blockchain_s.__str__()
 
 
@@ -38,7 +42,27 @@ def consult_address():
     '''
     if (request.method == 'POST'):
         #blockchain_s
-        return jsonify({'data': 'Nilson puto'})
+        return jsonify({'data': ''})
+
+@app.route('/new_account', methods = ['POST'])
+def new_account():
+    '''
+    This web service create a new account for a user, this service return
+    a number of wallet and that has
+    url: http://127.0.0.1:5002/new_account
+    '''
+    response_user = blockchain_s.generate_wallet(request.form['name_user'])
+    return jsonify(response_user)
+
+@app.route('/users', methods = ['GET'])
+def users():
+    '''
+    This web service return a list of user in the public ledger with format json
+
+    url: http://127.0.0.1:5002/users
+    '''
+
+    return  jsonify(blockchain_s.users())
   
 def run_services_blockchain(ip, port):
     '''

@@ -34,11 +34,65 @@ class Controller():
         req = Middleware()
         req.load_services() 
         return req.consult_found_block_chain_service(dict_parameters)
+    
+    @staticmethod
+    def close_block(block):
+        '''
+        This function makes all the logic to connect the Blockchain
+        with the OpenCloser component
+        :param block: the block to close
+        :type block: dict
+        :returns: a dict with the response
+        :rtype: dict
+        '''
+        req = Middleware()
+        req.load_services() 
+        return req.close_block(block)
 
-    def close_block():
-        pass
+    @staticmethod
     def register_transaction():
         pass
+    @staticmethod    
     def register_data():
         pass
+
+    @staticmethod
+    def show_block_chain():
+        '''
+        This method static, load services and consume the service show_block_chain
+
+        :returns: return a dictionary with status information and the blockchain
+        :rtype: dict
+        '''
+        req = Middleware()
+        req.load_services()
+
+        return req.get_block_chain()
     
+    @staticmethod
+    def create_user(user):
+        '''
+        This static method, load services and consume the service from Blockchain
+        where is going to storage the wallets of the users
+        :param user: the name of the user 
+        :type user: dict
+        :returns: the wallet with the message
+        :rtype: dict
+        '''
+        req = Middleware()
+        req.load_services()
+
+        return req.get_wallet(dict_parameters=user)
+    
+    @staticmethod
+    def show_wallets():
+        '''
+        This static method, load the services and consume the service from Blockchain
+        to show all the users in the public ledger
+        :returns: all the wallets
+        :rtype: dict
+        '''
+        req = Middleware()
+        req.load_services()
+        
+        return req.get_user_list()

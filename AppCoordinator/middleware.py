@@ -5,7 +5,7 @@ Coordinator: Middleware
 This module has functions that coordinate all the blockchain system
 '''
 
-import config as service
+from config import services
 import requests
 from werkzeug.wrappers import response
 
@@ -21,26 +21,12 @@ class Middleware:
         '''
         self.web_service_url = {}
     
-    def add_web_service(self, name, url):
-        '''
-        This function allows the middleware add new web service
-        with a minimum of information belongs to each web service
-        in the dictionary
-        :param name: the name or key of the web service
-        :type name: str
-        :param url: the url where the web service is or will be host
-        :type url: str
-        '''
-        self.web_service_url[name] = url
-    
     def load_services(self):
         '''
         This function execute with the instance 
         of Middleware, so allows to add the principals web services
         '''
-        self.add_web_service('blockchain', service.blockchain)
-        self.add_web_service('register', service.register)
-        self.add_web_service('opencloser', service.opencloser)
+        self.web_service_url = services
     
     def __str__(self):
         '''
@@ -49,7 +35,7 @@ class Middleware:
         '''
         return str(self.web_service_url)
 
-    def consume_service(self, type_method, uri, dict_parameter:dict):
+    def consume_service(self, type_method, uri, dict_parameter:dict={}):
         '''
         This function is used to consume a web service, and return a response, no matter
         if the communication fails
@@ -64,23 +50,59 @@ class Middleware:
         '''
         payload = dict(dict_parameter)
         headers = {}
-        response_unformat = {'url': uri,'status': 503, 'content': ''}
+        response_unformat = {'url': uri,'status': 503, 'content': '', 'active': False}
         try:
             data = requests.request(method=type_method, url=uri, headers=headers, data=payload)
             response_unformat['status'] = data.status_code
             response_unformat['content'] = data.json()
+            response_unformat['active'] = True
         except Exception:
             pass
-        print("Servicio consumido: ",response_unformat)
         return response_unformat
     
     def consult_found_block_chain_service(self, dict_parameters):
         '''
-        This function allow consume consult_found blockchain service that use the method POST
-        :param dict_paramteres: this parameter hava all parameters for use the service blockchain
-        :type dict_paramteres: dict
+        This function allows to consume consult_found blockchain service that use the method POST
+        :param dict_parameters: this parameter hava all parameters for use the service blockchain
+        :type dict_parameters: dict
         :returns: this function return a response with format JSON
         :rtype: dict[str, Any] 
         '''
-        return self.consume_service('POST', self.web_service_url['blockchain'], dict_parameters)
+        return self.consume_service('POST', self.web_service_url['blockchain_consult_address'], dict_parameters)
         
+    def get_block_chain(self):
+        '''
+        This function allows to the user to see the blockchain, this function has the purpose of
+        debug the code
+        '''
+        return self.consume_service('GET', self.web_service_url['blockchain_show'])
+
+    def close_block(self, dict_parameters):
+        '''
+        This function allows to the blockchain, close a block through a hash
+        :param dict_parameters: the block which is going to close the opencloser
+        :type dict_parameters: dict
+        :returns: the hash of the block
+        :rtype: dict
+        '''
+        return self.consume_service('POST',self.web_service_url['opencloser'], dict_parameters)
+    
+    def get_wallet(self, dict_parameters):
+        '''
+        This function allows to the user request a account from the class wallet in 
+        Blockchain
+        :param dict_parameters: the user name
+        :type dict_parameters: dict
+        :returns: the account of the user
+        :rtype: dict 
+        '''
+        return self.consume_service('POST', self.web_service_url['blockchain_new_account'], dict_parameters)
+    
+    def get_user_list(self):
+        '''
+        This function allows to the developers to see the users in the Blockchain
+        across the public ledger
+        :returns: the list of the user accounts
+        :rtype: dict
+        '''
+        return self.consume_service('GET', self.web_service_url['blockchain_show_users'])

@@ -6,7 +6,7 @@ This module create the instance of a block with the common atributes
 '''
 
 from transaction import Transaction
-
+from random import randint
 class Block():
     '''
     This class contains the block who's going to add in the blockchain
@@ -14,7 +14,7 @@ class Block():
     '''
     number_block_static = 0
 
-    def __init__(self, nonce:int = 0, transactions:list = [], hash_preview = "", hash = ""):
+    def __init__(self, nonce:int = 0, transactions:list = [], hash_preview = str('0'*64), hash = ''):
         '''
         The constructor of the block
         :param number_block: the current number of the block
@@ -36,14 +36,18 @@ class Block():
         Block.number_block_static +=1
     
     def __str__(self):
+        
+        transaction_list = []
+        for transaction in self.transactions:
+            transaction_list.append(transaction.__str__())
+        
         return {
-                'bloque':self.number_block,
+                'block':self.number_block,
                 'nonce':self.nonce,
-                'transactions':self.transactions,
+                'transactions': str(transaction_list),
                 'hash_preview':self.hash_preview,
                 'hash':self.hash
                 }
-        
 
     def add_transaction(self, transaction:Transaction):
         '''
@@ -52,8 +56,7 @@ class Block():
         :type transaction: Object<Transaction>
         '''
         
-        self.transactions.append(transaction.__dict__)
-
+        self.transactions.append(transaction)
     
     def count_transactions(self):
         '''
@@ -62,7 +65,7 @@ class Block():
         '''
         return len(self.transactions)
 
-    def add_hashes(self, hash_preview_t, hash_t):
+    def add_hashes(self, hash_preview_t = str('0'*64), hash_t=''):
         '''
         This function add the hashes to the block
         :param hash_preview_t: the hash of the last block in the blockchain
@@ -72,3 +75,6 @@ class Block():
         '''
         self.hash_preview = hash_preview_t
         self.hash = hash_t
+    
+    def add_nonce(self):
+        self.nonce = randint(1, 1000)

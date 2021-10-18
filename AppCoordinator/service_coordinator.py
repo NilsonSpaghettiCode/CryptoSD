@@ -5,7 +5,9 @@ Coordinator: Service Coordinator
 This a package that contains the main function for the service coordinator
 '''
 
+from os import pipe
 from flask import Flask, request
+from flask.json import jsonify
 from controller import Controller
 
 app = Flask(__name__)
@@ -16,6 +18,8 @@ def get_something():
     Main page
     '''
     return "<h1>Coordinator</h1>"
+
+# <---------------------------- Service for client --------------------------------->
 
 @app.route('/register_transaction', methods=['POST'])
 def transaction_register():
@@ -45,7 +49,45 @@ def consult_founds():
         return response_json
     else:
         return f'<p>Algo salio mal...</p>'
+
+@app.route('/show_block_chain', methods=['GET'])
+def show_block_chain():
+    return jsonify(Controller.show_block_chain())
+
+@app.route('/create_wallet', methods=['POST'])
+def create_wallet():
+    '''
+    This web service create the wallet of the user
+    url: http://127.0.0.1:5001/create_wallet
+    '''
+
+    return jsonify(Controller.create_user(request.form))
+
+@app.route('/show_users', methods=['GET'])
+def show_users():
+    '''
+    This web service has the purpose of debugging code,
+    allows to show all the wallets in the public ledger
+    url: http://127.0.0.1:5001/show_users
+    '''
     
+    return jsonify(Controller.show_wallets())
+
+# <--------------------------------- Service for components --------------------------------->
+
+@app.route('/register_data', methods=['POST'])
+def register_data():
+    pass
+
+@app.route('/close_block', methods=['POST'])
+def close_block():
+    '''
+    This web service is for the blockchain, when a block is full
+    the blockchain request this web service
+    url: http://127.0.0.1:5001/close_block
+    '''
+    return jsonify(Controller.close_block(request.form))
+
 def run_service_coordinator(host:str, port:int):
     ''' 
     This function runs the service coordinator that 
@@ -56,5 +98,4 @@ def run_service_coordinator(host:str, port:int):
     :param port: port is a localport controled for specfic OS 
     :type port: int
     '''
-    
     app.run(host, port, debug=True)
