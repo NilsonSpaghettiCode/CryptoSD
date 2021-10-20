@@ -77,4 +77,15 @@ class Block():
         self.hash = hash_t
     
     def add_nonce(self):
+        '''
+        This function add the nonce of the block
+        a random int
+                '''
         self.nonce = randint(1, 1000)
+
+    def get_transaction_list(self):
+        '''
+        This function return the list of transactions
+        in the block
+        '''    
+        return self.transactions

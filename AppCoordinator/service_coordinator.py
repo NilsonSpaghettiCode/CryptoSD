@@ -30,7 +30,8 @@ def transaction_register():
     url: http://127.0.0.1:5001/register_transaction
 
     '''
-    pass
+    return Controller.register_transaction(request.form)
+    
 
 @app.route('/consult_founds', methods=['POST'])
 def consult_founds():
@@ -52,6 +53,10 @@ def consult_founds():
 
 @app.route('/show_block_chain', methods=['GET'])
 def show_block_chain():
+    '''
+    This web service shows the blockchain
+    url: http://127.0.0.1:5001/show_block_chain
+    '''
     return jsonify(Controller.show_block_chain())
 
 @app.route('/create_wallet', methods=['POST'])
@@ -77,7 +82,13 @@ def show_users():
 
 @app.route('/register_data', methods=['POST'])
 def register_data():
-    pass
+    '''
+    This web service is for valid the transaction
+    which is going to the block, that means is the
+    in carge of certificate the transactions
+    url: http://127.0.0.1:5001/register_data
+    '''
+    return Controller.register_data(request.form)
 
 @app.route('/close_block', methods=['POST'])
 def close_block():

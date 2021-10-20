@@ -50,12 +50,31 @@ class Controller():
         return req.close_block(block)
 
     @staticmethod
-    def register_transaction():
-        pass
-    @staticmethod    
-    def register_data():
-        pass
+    def register_transaction(dict_transaction):
+        '''
+        This function allows to the blockchain receive the transaction
+        and add to the current block
+        :returns: a dict with the response
+        :rtype: dict
+        '''
+        req = Middleware()
+        req.load_services()
 
+        return req.consume_register_transaction(dict_transaction)
+
+    @staticmethod    
+    def register_data(dict_parameters):
+        '''
+        This function register and validate the data
+        :params dict_parameters:
+        :type dict_parameters:
+        :returns: return a dictionary with the valid transaction
+        :rtype: dict
+        '''
+        req = Middleware()
+        req.load_services()
+        return req.consume_register_data(dict_parameters)
+        
     @staticmethod
     def show_block_chain():
         '''

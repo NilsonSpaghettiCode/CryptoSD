@@ -9,7 +9,7 @@ import config
 from service_register import run_service_register
 def main():
     '''
-    This function allows the user to start the app Blockchain
+    This function allows the user to start the app Register
     with or without debug mode, and put the ip and port
     of the register app
     '''

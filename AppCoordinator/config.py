@@ -7,7 +7,7 @@ services = {
             'blockchain_new_account':'http://127.0.0.1:5002/new_account',
             'blockchain_show_users':'http://127.0.0.1:5002/users',
             # Register services
-            'register':'',
+            'register':'http://127.0.0.1:5004/register_transaction',
             # OpenCloser servicess
             'opencloser':'http://127.0.0.1:5003/closer_block'}
 

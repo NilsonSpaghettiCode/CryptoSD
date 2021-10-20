@@ -106,3 +106,22 @@ class Middleware:
         :rtype: dict
         '''
         return self.consume_service('GET', self.web_service_url['blockchain_show_users'])
+    
+    def consume_register_data(self, dict_parameters):
+        '''
+        This function consume the service from Blockchain to
+        make all the validations for the transaction, THIS SERVICE IS CONSUME FOR REGISTER
+        :returns: the transaction for the block
+        :rtype: dict
+        '''
+        return self.consume_service('POST', self.web_service_url['blockchain_register_data'], dict_parameters)
+   
+    def consume_register_transaction(self, dict_parameters):
+        '''
+        This function consume the service from register
+        and allows to the blockchain add the transaction
+        to the block
+        :returns: the transaction with all the validations
+        :rtype: dict
+        '''
+        return self.consume_service('POST',self.web_service_url['register'], dict_parameters)

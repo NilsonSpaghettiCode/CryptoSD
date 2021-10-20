@@ -40,10 +40,10 @@ def consult_address():
     address, if exists in the blockchain
     url: http://127.0.0.1:5002/consult_address
     '''
-    if (request.method == 'POST'):
-        #blockchain_s
-        return jsonify({'data': ''})
 
+    if (request.method == 'POST'):
+        return blockchain_s.consult_founds_wallet(request.form['wallet'])
+        
 @app.route('/new_account', methods = ['POST'])
 def new_account():
     '''

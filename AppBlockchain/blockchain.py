@@ -56,15 +56,18 @@ class Blockchain():
         :param transaction: the transaction to be added to the block
         :type transaction: Object<Transaction>
         '''
+        response = {'status_transaction': 0,
+                    'Transaction': transaction.__dict__,
+                    }
         if not self.verify_block_length():
             self.block_instanted.add_transaction(transaction)
+            response['status_transaction'] = 1
+
             if(self.verify_block_length()):
                 self.close_block()
                 self.add_new_block()
             
-        return {'status_transaction':1,
-                'Transaction':transaction.__dict__,
-                }
+        return response
     
     def verify_block_length(self):
         '''
@@ -103,27 +106,48 @@ class Blockchain():
         self.block_instanted = Block()
         self.block_instanted.transactions = []
     
-    def calculate_founds_blockchain(self):
+    def calculate_founds_blockchain(self, wallet):
         '''
         This functions calculate the current founds in the blockchain
+        of a specific wallet throught the transactions of each block
         '''
-        '''
-        total = 0
+        amount_wallet = int(0)
         for block in self.blockchain:
-            for money in block.transactions:
-                total += money.amount
-        '''
-        
-    def consult_founds_wallet(address:str):
+            transaction_list = block.get_transaction_list()
+            for transaction in transaction_list:
+                if wallet == transaction.from_u:
+                    amount_wallet -= int(transaction.amount)
+                if wallet == transaction.to_u:
+                    amount_wallet += int(transaction.amount)
+
+            
+        return amount_wallet
+
+
+    def consult_founds_wallet(self, address:str) -> dict:
         '''
         This function allows to consult if a wallet address exists in
         the blockchain
         :param address: the address to consult
         :type address: str
-        :returns:
-        :rtype:
+        :returns: return a wallet dict 
+        :rtype: dict
         '''
+    
+        response = {
+                    'request_wallet': address,
+                    'exists': False, 
+                    'amount': 0
+                    }
+                   
+        if self.account_exists(address):
+            response['exists'] = True
+            amount = self.calculate_founds_blockchain(address)
+            response['amount'] = amount
         
+        return response
+        
+
     def generate_wallet(self, name_user):
         '''
         This function create the wallet of the user with a name
@@ -141,18 +165,34 @@ class Blockchain():
 
         return response 
     
-    def user_exists(self,user):
-
+    def user_exists(self, user):
         '''
         This function search a user in public ledger
         :param user: user to search
-        :returns:
+        :returns: a boolean if the user exists or no
         :rtype: boolean
         '''
+        exists = False
         for user_account in self.public_ledger:
             if user_account['user'] == user:
-                return True 
-        return False
+                exists = True 
+            
+        
+        return exists
+        
+    def account_exists(self, account):
+        '''
+        This function search a account in public ledger
+        :param account: account to search
+        :returns: a boolean if the account exists or no
+        :rtype: boolean
+        '''
+        exists = False
+
+        for user_account in self.public_ledger:
+            if user_account['account'] == account:
+                exists = True
+        return exists
     
     def users(self):
         '''
