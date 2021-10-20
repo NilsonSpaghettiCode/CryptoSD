@@ -34,10 +34,10 @@ class Register():
         servicies  = Services()
         wallet_format_from = {'wallet':wallet_from}
         information_wallet_from = servicies.consume_consult_founds(wallet_format_from) #{'content': 'content':
-        print("WALLET",information_wallet_from)
+        #print("WALLET",information_wallet_from)
         wallet_format_to = {'wallet': wallet_to}
         information_wallet_to = servicies.consume_consult_founds(wallet_format_to) 
-        print("WALLET",information_wallet_to)
+        #print("WALLET",information_wallet_to)
         transaction = {
                         'from_wallet':wallet_from,
                         'to_wallet':wallet_to,
@@ -53,12 +53,12 @@ class Register():
         error_message = ''
         amount = int(amount)
         if information_wallet_from['exists'] == True and information_wallet_to['exists'] == True :
-            print("WF_A",type(information_wallet_from['amount']))
-            print("amount", type(amount))
+            #print("WF_A",type(information_wallet_from['amount']))
+            #print("amount", type(amount))
             if information_wallet_from['amount'] >= amount and amount > -1:
                 response_t['transaction_valid'] = True
                 status_transaction = servicies.consume_register_data(transaction)
-                print("Status transaction",status_transaction)
+                #print("Status transaction",status_transaction)
 
                 if status_transaction['status_transaction'] == 1:
                     response_t['transaction_done'] = True
