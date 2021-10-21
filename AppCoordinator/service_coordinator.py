@@ -5,12 +5,14 @@ Coordinator: Service Coordinator
 This a package that contains the main function for the service coordinator
 '''
 
-from os import pipe
 from flask import Flask, request
 from flask.json import jsonify
 from controller import Controller
-
+from flask_cors import CORS, cross_origin
 app = Flask(__name__)
+cors = CORS(app)
+
+app.config['CORS_HEADER'] = 'Content-Type'
 
 @app.route('/')
 def get_something():
@@ -60,6 +62,7 @@ def show_block_chain():
     return jsonify(Controller.show_block_chain())
 
 @app.route('/create_wallet', methods=['POST'])
+@cross_origin()
 def create_wallet():
     '''
     This web service create the wallet of the user

@@ -155,13 +155,16 @@ class Blockchain():
         :param name_user: the name of the user account
         :type name_user: str
         '''
-        response = {'user':name_user, 'error':'User Exists'}
+        response = {'exist':True, 'error':'User exists', 'user': name_user}
         
         if not self.user_exists(name_user):
             new_account = self.generator_wallets.generate_new_wallet()
             new_user = {'user':name_user,'account':new_account}
+
             self.public_ledger.append(new_user)
             response = new_user
+            response['exist'] = False
+            response['error'] = 'Non error'
 
         return response 
     
