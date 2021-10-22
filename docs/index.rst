@@ -11,11 +11,11 @@ Welcome to blockchain's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   coordinator
    blockchain
    opencloser
    register
-   
+   coordinator
+
 
    
 

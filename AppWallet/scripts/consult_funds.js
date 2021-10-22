@@ -17,7 +17,7 @@ function consult_wallet() {
     let wallet = document.getElementById('wallet').value
 
     let formdata = new FormData()
-    formdata.append('wallet', wallet)
+    formdata.append('wallet', wallet.trim())
 
     let requestOptions = setRequestOptions('POST', formdata)
     let response = consumeService(config.services[0]['consult_funds_url'], requestOptions, processResponse ,processError)

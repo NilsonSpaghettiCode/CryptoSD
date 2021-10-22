@@ -21,8 +21,8 @@ function makeTransaction() {
         let formdata = new FormData()
 
         //Set field as formdata
-        formdata.append('from_wallet', from_wallet)
-        formdata.append('to_wallet', to_wallet)
+        formdata.append('from_wallet', from_wallet.trim())
+        formdata.append('to_wallet', to_wallet.trim())
         formdata.append('amount', format_amount_transaction)
 
         let requestOptions = setRequestOptions('POST',formdata)

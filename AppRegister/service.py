@@ -1,5 +1,5 @@
 '''
-Register: Consume service
+Register: Services Register class
 -----------------------------
 
 This module consume the service from

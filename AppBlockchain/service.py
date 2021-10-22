@@ -1,3 +1,10 @@
+'''
+Blockchain: Services class
+-----------------------------
+
+This module consume the service
+'''
+
 import requests
 import config 
 

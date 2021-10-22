@@ -1,3 +1,9 @@
+'''
+Coordinator: Config
+-----------------------------
+
+This module contains the config
+'''
 # Web services
 services = {
             # Blockchain services

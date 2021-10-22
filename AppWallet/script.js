@@ -9,7 +9,7 @@ function create_wallet() {
     let name_user = document.getElementById('name_user').value
 
     let formdata = new FormData()
-    formdata.append('name_user',name_user)
+    formdata.append('name_user', name_user.trim())
 
     let requestOptions = setRequestOptions('POST', formdata)
     let response = consumeService(config.services[2]['create_wallet_url'], requestOptions, processResponse ,processError)
