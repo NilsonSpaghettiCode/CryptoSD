@@ -22,7 +22,7 @@ def get_something():
     return "<h1>Coordinator</h1>"
 
 # <---------------------------- Service for client --------------------------------->
-
+@cross_origin()
 @app.route('/register_transaction', methods=['POST'])
 def transaction_register():
     '''
@@ -36,6 +36,7 @@ def transaction_register():
     
 
 @app.route('/consult_founds', methods=['POST'])
+@cross_origin()
 def consult_founds():
     '''
     Web service for the client, that execute the required proccess,

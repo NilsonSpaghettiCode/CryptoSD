@@ -65,21 +65,23 @@
                 </p>
 
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">From wallet</span>
+                    <span class="input-group-text">From wallet</span>
                     <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1">
+                        aria-describedby="basic-addon1" id="from_wallet">
                 </div>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">To Wallet</span>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1">
+                    <span class="input-group-text" >To Wallet</span>
+                    <input type="text" class="form-control" id="to_wallet" placeholder="Username" aria-label="Username"
+                        aria-describedby="basic-addon1" >
+                </div>
+                <div id="control-number">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">$</span>
                     <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)"
-                        placeholder="amount">
+                        placeholder="amount" id="amount_transaction" >
                 </div>
-                <button type="submit" class="btn btn-primary">Make transaction</button>
+                <button type="submit" class="btn btn-primary" id="btn_transaction">Make transaction</button>
 
             </div>
             <div class="card-footer text-muted">

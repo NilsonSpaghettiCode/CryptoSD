@@ -17,14 +17,14 @@ function create_wallet() {
 }
 
 
-function processResponse(response) {
+export function processResponse(response) {
     //console.log(response)
 
     setAlertSucess(response)
     
     
 }
-function processError(error)
+export function processError(error)
 {
     setAlertError(error)
 }

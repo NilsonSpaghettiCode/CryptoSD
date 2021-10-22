@@ -52,11 +52,11 @@ class Register():
         
         error_message = ''
         amount = int(amount)
-        if information_wallet_from['exists'] == True and information_wallet_to['exists'] == True :
+        if information_wallet_from['exists'] == True and information_wallet_to['exists'] == True and amount > -1:
             #print("WF_A",type(information_wallet_from['amount']))
             #print("amount", type(amount))
-            if information_wallet_from['amount'] >= amount and amount > -1:
-                response_t['transaction_valid'] = True
+            response_t['transaction_valid'] = True
+            if information_wallet_from['amount'] >= amount:
                 status_transaction = servicies.consume_register_data(transaction)
                 #print("Status transaction",status_transaction)
 
