@@ -1,13 +1,13 @@
 export const config = {
     "services":[
         {
-            "consult_funds_url":"http://127.0.0.1:5001/consult_founds"
+            "consult_funds_url":"http://localhost:5200/consult_founds"
         },
         {
-            "register_transaction_url":"http://127.0.0.1:5001/register_transaction"
+            "register_transaction_url":"http://localhost:5200/register_transaction"
         },
         {
-            "create_wallet_url":"http://127.0.0.1:5001/create_wallet"
+            "create_wallet_url":"http://localhost:5200/create_wallet"
         }
     ]
     }
