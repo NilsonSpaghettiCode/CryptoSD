@@ -1,7 +1,7 @@
 .. automodule:: service_coordinator
    :members:
    
-.. automodule:: config
+.. automodule:: config_coordinator
    :members:
    
 .. automodule:: middleware

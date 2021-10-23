@@ -1,4 +1,4 @@
-.. automodule:: config
+.. automodule:: config_blockchain
    :members:
    
 .. automodule:: block
@@ -13,7 +13,7 @@
 .. automodule:: service_blockchain
    :members:
 
-.. automodule:: service
+.. automodule:: consume_service_blockchain
    :members:
 
 .. automodule:: transaction

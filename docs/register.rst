@@ -1,4 +1,4 @@
-.. automodule:: config
+.. automodule:: config_register
    :members:
    
 .. automodule:: main_register
@@ -10,5 +10,5 @@
 .. automodule:: service_register
    :members:
 
-.. automodule:: service
+.. automodule:: consume_service_register
    :members:

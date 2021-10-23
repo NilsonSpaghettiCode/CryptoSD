@@ -1,44 +1,97 @@
-
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>Coordinator: Service Coordinator &#8212; Blockchain simulator 1.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coordinator: Service Coordinator &mdash; Blockchain simulator 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Register: Main Register" href="register.html" /> 
-  </head><body>
-      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
-          <span>Blockchain simulator 1.0 documentation</span></a></h1>
-        <h2 class="heading"><span>Coordinator: Service Coordinator</span></h2>
-      </div>
-      <div class="topnav" role="navigation" aria-label="top navigation">
-      
-        <p>
-        «&#160;&#160;<a href="register.html">Register: Main Register</a>
-        &#160;&#160;::&#160;&#160;
-        <a class="uplink" href="index.html">Contents</a>
-        </p>
+    <link rel="prev" title="Register: Config" href="register.html" /> 
+</head>
 
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Blockchain simulator
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html">Blockchain: Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html#blockchain-class-block">Blockchain: Class Block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html#blockchain-class-blockchain">Blockchain: Class Blockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html#blockchain-main-blockchain">Blockchain: Main Blockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html#blockchain-service-blockchain">Blockchain: Service Blockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html#blockchain-services-class">Blockchain: Services class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html#blockchain-class-transaction">Blockchain: Class Transaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html#blockchain-class-wallet">Blockchain: Class Wallet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencloser.html">OpenCloser: Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencloser.html#opencloser-main-opencloser">OpenCloser: Main OpenCloser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencloser.html#opencloser-class-opencloser">OpenCloser: Class OpenCloser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencloser.html#opencloser-service-opencloser">OpenCloser: Service OpenCloser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="register.html">Register: Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="register.html#register-main-register">Register: Main Register</a></li>
+<li class="toctree-l1"><a class="reference internal" href="register.html#register-register-class">Register: Register class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="register.html#register-service-register">Register: Service Register</a></li>
+<li class="toctree-l1"><a class="reference internal" href="register.html#register-services-register-class">Register: Services Register class</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Coordinator: Service Coordinator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#coordinator-config">Coordinator: Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#coordinator-middleware">Coordinator: Middleware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#coordinator-class-controller">Coordinator: Class Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#coordinator-main-coordinator">Coordinator: Main coordinator</a></li>
+</ul>
+
+        </div>
       </div>
-      <div class="content" role="main">
-        
-        
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Blockchain simulator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Coordinator: Service Coordinator</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/coordinator.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
   <span class="target" id="module-service_coordinator"></span><section id="coordinator-service-coordinator">
-<h1>Coordinator: Service Coordinator<a class="headerlink" href="#coordinator-service-coordinator" title="Permalink to this headline">¶</a></h1>
+<h1>Coordinator: Service Coordinator<a class="headerlink" href="#coordinator-service-coordinator" title="Permalink to this headline"></a></h1>
 <p>This a package that contains the main function for the service coordinator</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.close_block">
-<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">close_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.close_block" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">close_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.close_block" title="Permalink to this definition"></a></dt>
 <dd><p>This web service is for the blockchain, when a block is full
 the blockchain request this web service
 url: <a class="reference external" href="http://127.0.0.1:5001/close_block">http://127.0.0.1:5001/close_block</a></p>
@@ -46,7 +99,7 @@ url: <a class="reference external" href="http://127.0.0.1:5001/close_block">http
 
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.consult_founds">
-<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">consult_founds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.consult_founds" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">consult_founds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.consult_founds" title="Permalink to this definition"></a></dt>
 <dd><p>Web service for the client, that execute the required proccess,
 calling all the correspond web service from the others components
 to get the user founds in the wallet
@@ -55,20 +108,20 @@ url: <a class="reference external" href="http://127.0.0.1:5001/consult_founds">h
 
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.create_wallet">
-<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">create_wallet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.create_wallet" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">create_wallet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.create_wallet" title="Permalink to this definition"></a></dt>
 <dd><p>This web service create the wallet of the user
 url: <a class="reference external" href="http://127.0.0.1:5001/create_wallet">http://127.0.0.1:5001/create_wallet</a></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.get_something">
-<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">get_something</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.get_something" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">get_something</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.get_something" title="Permalink to this definition"></a></dt>
 <dd><p>Main page</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.register_data">
-<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">register_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.register_data" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">register_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.register_data" title="Permalink to this definition"></a></dt>
 <dd><p>This web service is for valid the transaction
 which is going to the block, that means is the
 in carge of certificate the transactions
@@ -77,7 +130,7 @@ url: <a class="reference external" href="http://127.0.0.1:5001/register_data">ht
 
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.run_service_coordinator">
-<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">run_service_coordinator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.run_service_coordinator" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">run_service_coordinator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.run_service_coordinator" title="Permalink to this definition"></a></dt>
 <dd><p>This function runs the service coordinator that 
 allow comunicate diferents services</p>
 <dl class="field-list simple">
@@ -92,14 +145,14 @@ allow comunicate diferents services</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.show_block_chain">
-<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">show_block_chain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.show_block_chain" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">show_block_chain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.show_block_chain" title="Permalink to this definition"></a></dt>
 <dd><p>This web service shows the blockchain
 url: <a class="reference external" href="http://127.0.0.1:5001/show_block_chain">http://127.0.0.1:5001/show_block_chain</a></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.show_users">
-<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">show_users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.show_users" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">show_users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.show_users" title="Permalink to this definition"></a></dt>
 <dd><p>This web service has the purpose of debugging code,
 allows to show all the wallets in the public ledger
 url: <a class="reference external" href="http://127.0.0.1:5001/show_users">http://127.0.0.1:5001/show_users</a></p>
@@ -107,7 +160,7 @@ url: <a class="reference external" href="http://127.0.0.1:5001/show_users">http:
 
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.transaction_register">
-<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">transaction_register</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.transaction_register" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">transaction_register</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.transaction_register" title="Permalink to this definition"></a></dt>
 <dd><p>Web service for the client, that execute all the required proccess
 to valid a transaction and add to the block the new transaction,
 before add the complete block to the blockchain
@@ -115,17 +168,21 @@ url: <a class="reference external" href="http://127.0.0.1:5001/register_transact
 </dd></dl>
 
 </section>
-<span class="target" id="module-config"></span><span class="target" id="module-middleware"></span><section id="coordinator-middleware">
-<h1>Coordinator: Middleware<a class="headerlink" href="#coordinator-middleware" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-config_coordinator"></span><section id="coordinator-config">
+<h1>Coordinator: Config<a class="headerlink" href="#coordinator-config" title="Permalink to this headline"></a></h1>
+<p>This module contains the config</p>
+</section>
+<span class="target" id="module-middleware"></span><section id="coordinator-middleware">
+<h1>Coordinator: Middleware<a class="headerlink" href="#coordinator-middleware" title="Permalink to this headline"></a></h1>
 <p>This module has functions that coordinate all the blockchain system</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="middleware.Middleware">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">middleware.</span></span><span class="sig-name descname"><span class="pre">Middleware</span></span><a class="headerlink" href="#middleware.Middleware" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">middleware.</span></span><span class="sig-name descname"><span class="pre">Middleware</span></span><a class="headerlink" href="#middleware.Middleware" title="Permalink to this definition"></a></dt>
 <dd><p>This class register the required web service to 
 coordinate all the functions of CryptoSD:Blockchain</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.close_block">
-<span class="sig-name descname"><span class="pre">close_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.close_block" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">close_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.close_block" title="Permalink to this definition"></a></dt>
 <dd><p>This function allows to the blockchain, close a block through a hash
 :param dict_parameters: the block which is going to close the opencloser
 :type dict_parameters: dict
@@ -135,7 +192,7 @@ coordinate all the functions of CryptoSD:Blockchain</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.consult_found_block_chain_service">
-<span class="sig-name descname"><span class="pre">consult_found_block_chain_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.consult_found_block_chain_service" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">consult_found_block_chain_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.consult_found_block_chain_service" title="Permalink to this definition"></a></dt>
 <dd><p>This function allows to consume consult_found blockchain service that use the method POST
 :param dict_parameters: this parameter hava all parameters for use the service blockchain
 :type dict_parameters: dict
@@ -145,7 +202,7 @@ coordinate all the functions of CryptoSD:Blockchain</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.consume_register_data">
-<span class="sig-name descname"><span class="pre">consume_register_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.consume_register_data" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">consume_register_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.consume_register_data" title="Permalink to this definition"></a></dt>
 <dd><p>This function consume the service from Blockchain to
 make all the validations for the transaction, THIS SERVICE IS CONSUME FOR REGISTER
 :returns: the transaction for the block
@@ -154,7 +211,7 @@ make all the validations for the transaction, THIS SERVICE IS CONSUME FOR REGIST
 
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.consume_register_transaction">
-<span class="sig-name descname"><span class="pre">consume_register_transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.consume_register_transaction" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">consume_register_transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.consume_register_transaction" title="Permalink to this definition"></a></dt>
 <dd><p>This function consume the service from register
 and allows to the blockchain add the transaction
 to the block
@@ -164,7 +221,7 @@ to the block
 
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.consume_service">
-<span class="sig-name descname"><span class="pre">consume_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict_parameter</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.consume_service" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">consume_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict_parameter</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.consume_service" title="Permalink to this definition"></a></dt>
 <dd><p>This function is used to consume a web service, and return a response, no matter
 if the communication fails
 :param type_method: the method where is going to pass the communication (POST/GET)
@@ -179,14 +236,14 @@ if the communication fails
 
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.get_block_chain">
-<span class="sig-name descname"><span class="pre">get_block_chain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.get_block_chain" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_block_chain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.get_block_chain" title="Permalink to this definition"></a></dt>
 <dd><p>This function allows to the user to see the blockchain, this function has the purpose of
 debug the code</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.get_user_list">
-<span class="sig-name descname"><span class="pre">get_user_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.get_user_list" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_user_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.get_user_list" title="Permalink to this definition"></a></dt>
 <dd><p>This function allows to the developers to see the users in the Blockchain
 across the public ledger
 :returns: the list of the user accounts
@@ -195,7 +252,7 @@ across the public ledger
 
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.get_wallet">
-<span class="sig-name descname"><span class="pre">get_wallet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.get_wallet" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_wallet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.get_wallet" title="Permalink to this definition"></a></dt>
 <dd><p>This function allows to the user request a account from the class wallet in 
 Blockchain
 :param dict_parameters: the user name
@@ -206,7 +263,7 @@ Blockchain
 
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.load_services">
-<span class="sig-name descname"><span class="pre">load_services</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.load_services" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">load_services</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.load_services" title="Permalink to this definition"></a></dt>
 <dd><p>This function execute with the instance 
 of Middleware, so allows to add the principals web services</p>
 </dd></dl>
@@ -215,17 +272,17 @@ of Middleware, so allows to add the principals web services</p>
 
 </section>
 <span class="target" id="module-controller"></span><section id="coordinator-class-controller">
-<h1>Coordinator: Class Controller<a class="headerlink" href="#coordinator-class-controller" title="Permalink to this headline">¶</a></h1>
+<h1>Coordinator: Class Controller<a class="headerlink" href="#coordinator-class-controller" title="Permalink to this headline"></a></h1>
 <p>This module perform like someone who makes
 the mainstage for all the components</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="controller.Controller">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">controller.</span></span><span class="sig-name descname"><span class="pre">Controller</span></span><a class="headerlink" href="#controller.Controller" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">controller.</span></span><span class="sig-name descname"><span class="pre">Controller</span></span><a class="headerlink" href="#controller.Controller" title="Permalink to this definition"></a></dt>
 <dd><p>This controller perform like the driver
 of the app code</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="controller.Controller.close_block">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">close_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.close_block" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">close_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.close_block" title="Permalink to this definition"></a></dt>
 <dd><p>This function makes all the logic to connect the Blockchain
 with the OpenCloser component
 :param block: the block to close
@@ -236,7 +293,7 @@ with the OpenCloser component
 
 <dl class="py method">
 <dt class="sig sig-object py" id="controller.Controller.consult_founds">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">consult_founds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.consult_founds" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">consult_founds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.consult_founds" title="Permalink to this definition"></a></dt>
 <dd><p>This function consume a service from Blockchain
 to get the money in a wallet, only if this wallet
 is valid
@@ -249,7 +306,7 @@ the wallet and the exist of the account
 
 <dl class="py method">
 <dt class="sig sig-object py" id="controller.Controller.create_user">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">create_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.create_user" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">create_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.create_user" title="Permalink to this definition"></a></dt>
 <dd><p>This static method, load services and consume the service from Blockchain
 where is going to storage the wallets of the users
 :param user: the name of the user 
@@ -260,7 +317,7 @@ where is going to storage the wallets of the users
 
 <dl class="py method">
 <dt class="sig sig-object py" id="controller.Controller.register_data">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">register_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.register_data" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">register_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.register_data" title="Permalink to this definition"></a></dt>
 <dd><p>This function register and validate the data
 :params dict_parameters:
 :type dict_parameters:
@@ -270,7 +327,7 @@ where is going to storage the wallets of the users
 
 <dl class="py method">
 <dt class="sig sig-object py" id="controller.Controller.register_transaction">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">register_transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_transaction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.register_transaction" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">register_transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_transaction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.register_transaction" title="Permalink to this definition"></a></dt>
 <dd><p>This function allows to the blockchain receive the transaction
 and add to the current block
 :returns: a dict with the response
@@ -279,7 +336,7 @@ and add to the current block
 
 <dl class="py method">
 <dt class="sig sig-object py" id="controller.Controller.show_block_chain">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">show_block_chain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.show_block_chain" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">show_block_chain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.show_block_chain" title="Permalink to this definition"></a></dt>
 <dd><p>This method static, load services and consume the service show_block_chain</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -293,7 +350,7 @@ and add to the current block
 
 <dl class="py method">
 <dt class="sig sig-object py" id="controller.Controller.show_wallets">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">show_wallets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.show_wallets" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">show_wallets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.show_wallets" title="Permalink to this definition"></a></dt>
 <dd><p>This static method, load the services and consume the service from Blockchain
 to show all the users in the public ledger
 :returns: all the wallets
@@ -304,11 +361,11 @@ to show all the users in the public ledger
 
 </section>
 <span class="target" id="module-main_coordinator"></span><section id="coordinator-main-coordinator">
-<h1>Coordinator: Main coordinator<a class="headerlink" href="#coordinator-main-coordinator" title="Permalink to this headline">¶</a></h1>
+<h1>Coordinator: Main coordinator<a class="headerlink" href="#coordinator-main-coordinator" title="Permalink to this headline"></a></h1>
 <p>This module run the coordinator app</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="main_coordinator.main">
-<span class="sig-prename descclassname"><span class="pre">main_coordinator.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_coordinator.main" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">main_coordinator.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_coordinator.main" title="Permalink to this definition"></a></dt>
 <dd><p>This function allows the user to start the app
 with or without debug mode, and put the ip and port
 of the coordinator app</p>
@@ -317,20 +374,33 @@ of the coordinator app</p>
 </section>
 
 
-      </div>
-      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
-      
-        <p>
-        «&#160;&#160;<a href="register.html">Register: Main Register</a>
-        &#160;&#160;::&#160;&#160;
-        <a class="uplink" href="index.html">Contents</a>
-        </p>
-
-      </div>
-
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, Edwin Becerra, Nilson Vargas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="register.html" class="btn btn-neutral float-left" title="Register: Config" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  </body>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Edwin Becerra, Nilson Vargas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

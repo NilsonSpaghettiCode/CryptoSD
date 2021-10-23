@@ -1,52 +1,107 @@
-
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>Blockchain: Class Block &#8212; Blockchain simulator 1.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blockchain: Config &mdash; Blockchain simulator 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="OpenCloser: Main OpenCloser" href="opencloser.html" />
+    <link rel="next" title="OpenCloser: Config" href="opencloser.html" />
     <link rel="prev" title="Welcome to blockchain’s documentation!" href="index.html" /> 
-  </head><body>
-      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
-          <span>Blockchain simulator 1.0 documentation</span></a></h1>
-        <h2 class="heading"><span>Blockchain: Class Block</span></h2>
-      </div>
-      <div class="topnav" role="navigation" aria-label="top navigation">
-      
-        <p>
-        «&#160;&#160;<a href="index.html">Welcome to blockchain’s documentation!</a>
-        &#160;&#160;::&#160;&#160;
-        <a class="uplink" href="index.html">Contents</a>
-        &#160;&#160;::&#160;&#160;
-        <a href="opencloser.html">OpenCloser: Main OpenCloser</a>&#160;&#160;»
-        </p>
+</head>
 
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Blockchain simulator
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Blockchain: Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#blockchain-class-block">Blockchain: Class Block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#blockchain-class-blockchain">Blockchain: Class Blockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#blockchain-main-blockchain">Blockchain: Main Blockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#blockchain-service-blockchain">Blockchain: Service Blockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#blockchain-services-class">Blockchain: Services class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#blockchain-class-transaction">Blockchain: Class Transaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#blockchain-class-wallet">Blockchain: Class Wallet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencloser.html">OpenCloser: Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencloser.html#opencloser-main-opencloser">OpenCloser: Main OpenCloser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencloser.html#opencloser-class-opencloser">OpenCloser: Class OpenCloser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencloser.html#opencloser-service-opencloser">OpenCloser: Service OpenCloser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="register.html">Register: Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="register.html#register-main-register">Register: Main Register</a></li>
+<li class="toctree-l1"><a class="reference internal" href="register.html#register-register-class">Register: Register class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="register.html#register-service-register">Register: Service Register</a></li>
+<li class="toctree-l1"><a class="reference internal" href="register.html#register-services-register-class">Register: Services Register class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinator.html">Coordinator: Service Coordinator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinator.html#coordinator-config">Coordinator: Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinator.html#coordinator-middleware">Coordinator: Middleware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinator.html#coordinator-class-controller">Coordinator: Class Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinator.html#coordinator-main-coordinator">Coordinator: Main coordinator</a></li>
+</ul>
+
+        </div>
       </div>
-      <div class="content" role="main">
-        
-        
-  <span class="target" id="module-config"></span><span class="target" id="module-block"></span><section id="blockchain-class-block">
-<h1>Blockchain: Class Block<a class="headerlink" href="#blockchain-class-block" title="Permalink to this headline">¶</a></h1>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Blockchain simulator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Blockchain: Config</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/blockchain.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="module-config_blockchain"></span><section id="blockchain-config">
+<h1>Blockchain: Config<a class="headerlink" href="#blockchain-config" title="Permalink to this headline"></a></h1>
+<p>This module contains the config</p>
+</section>
+<span class="target" id="module-block"></span><section id="blockchain-class-block">
+<h1>Blockchain: Class Block<a class="headerlink" href="#blockchain-class-block" title="Permalink to this headline"></a></h1>
 <p>This module create the instance of a block with the common atributes</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="block.Block">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">block.</span></span><span class="sig-name descname"><span class="pre">Block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nonce</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transactions</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hash_preview</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0000000000000000000000000000000000000000000000000000000000000000'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hash</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#block.Block" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">block.</span></span><span class="sig-name descname"><span class="pre">Block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nonce</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transactions</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hash_preview</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0000000000000000000000000000000000000000000000000000000000000000'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hash</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#block.Block" title="Permalink to this definition"></a></dt>
 <dd><p>This class contains the block who’s going to add in the blockchain
 when the transactions has three records with valid money transferences</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="block.Block.add_hashes">
-<span class="sig-name descname"><span class="pre">add_hashes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hash_preview_t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0000000000000000000000000000000000000000000000000000000000000000'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hash_t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.add_hashes" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_hashes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hash_preview_t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0000000000000000000000000000000000000000000000000000000000000000'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hash_t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.add_hashes" title="Permalink to this definition"></a></dt>
 <dd><p>This function add the hashes to the block
 :param hash_preview_t: the hash of the last block in the blockchain
 :type hash_preview_t: hash
@@ -56,14 +111,14 @@ when the transactions has three records with valid money transferences</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="block.Block.add_nonce">
-<span class="sig-name descname"><span class="pre">add_nonce</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.add_nonce" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_nonce</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.add_nonce" title="Permalink to this definition"></a></dt>
 <dd><p>This function add the nonce of the block
 a random int</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="block.Block.add_transaction">
-<span class="sig-name descname"><span class="pre">add_transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transaction</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#transaction.Transaction" title="transaction.Transaction"><span class="pre">transaction.Transaction</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.add_transaction" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transaction</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#transaction.Transaction" title="transaction.Transaction"><span class="pre">transaction.Transaction</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.add_transaction" title="Permalink to this definition"></a></dt>
 <dd><p>This function adds the transaction to the block
 :param transaction: receives the object Transaction
 :type transaction: Object&lt;Transaction&gt;</p>
@@ -71,14 +126,14 @@ a random int</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="block.Block.count_transactions">
-<span class="sig-name descname"><span class="pre">count_transactions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.count_transactions" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">count_transactions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.count_transactions" title="Permalink to this definition"></a></dt>
 <dd><p>This function counts the length of transactions in the
 block</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="block.Block.get_transaction_list">
-<span class="sig-name descname"><span class="pre">get_transaction_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.get_transaction_list" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_transaction_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.get_transaction_list" title="Permalink to this definition"></a></dt>
 <dd><p>This function return the list of transactions
 in the block</p>
 </dd></dl>
@@ -87,17 +142,17 @@ in the block</p>
 
 </section>
 <span class="target" id="module-blockchain"></span><section id="blockchain-class-blockchain">
-<h1>Blockchain: Class Blockchain<a class="headerlink" href="#blockchain-class-blockchain" title="Permalink to this headline">¶</a></h1>
+<h1>Blockchain: Class Blockchain<a class="headerlink" href="#blockchain-class-blockchain" title="Permalink to this headline"></a></h1>
 <p>This module create the instance of a block with the common atributes</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="blockchain.Blockchain">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">blockchain.</span></span><span class="sig-name descname"><span class="pre">Blockchain</span></span><a class="headerlink" href="#blockchain.Blockchain" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">blockchain.</span></span><span class="sig-name descname"><span class="pre">Blockchain</span></span><a class="headerlink" href="#blockchain.Blockchain" title="Permalink to this definition"></a></dt>
 <dd><p>This class contains all the blockchain functions with
 the list of blocks, instance this class once to create
 the blockchain</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.account_exists">
-<span class="sig-name descname"><span class="pre">account_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">account</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.account_exists" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">account_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">account</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.account_exists" title="Permalink to this definition"></a></dt>
 <dd><p>This function search a account in public ledger
 :param account: account to search
 :returns: a boolean if the account exists or no
@@ -106,28 +161,28 @@ the blockchain</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.add_new_block">
-<span class="sig-name descname"><span class="pre">add_new_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.add_new_block" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_new_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.add_new_block" title="Permalink to this definition"></a></dt>
 <dd><p>This function reset the instance of block, where is going to write the
 transactions</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.calculate_founds_blockchain">
-<span class="sig-name descname"><span class="pre">calculate_founds_blockchain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wallet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.calculate_founds_blockchain" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">calculate_founds_blockchain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wallet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.calculate_founds_blockchain" title="Permalink to this definition"></a></dt>
 <dd><p>This functions calculate the current founds in the blockchain
 of a specific wallet throught the transactions of each block</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.close_block">
-<span class="sig-name descname"><span class="pre">close_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.close_block" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">close_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.close_block" title="Permalink to this definition"></a></dt>
 <dd><p>This function receives a response from OpenCloser across Coordinator
 and close the block, adding the nonce with the hashes, only if this is full.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.consult_founds_wallet">
-<span class="sig-name descname"><span class="pre">consult_founds_wallet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#blockchain.Blockchain.consult_founds_wallet" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">consult_founds_wallet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#blockchain.Blockchain.consult_founds_wallet" title="Permalink to this definition"></a></dt>
 <dd><p>This function allows to consult if a wallet address exists in
 the blockchain
 :param address: the address to consult
@@ -138,7 +193,7 @@ the blockchain
 
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.generate_wallet">
-<span class="sig-name descname"><span class="pre">generate_wallet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name_user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.generate_wallet" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">generate_wallet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name_user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.generate_wallet" title="Permalink to this definition"></a></dt>
 <dd><p>This function create the wallet of the user with a name
 and a random hashed account
 :param name_user: the name of the user account
@@ -147,7 +202,7 @@ and a random hashed account
 
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.register_transaction_block">
-<span class="sig-name descname"><span class="pre">register_transaction_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transaction</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#transaction.Transaction" title="transaction.Transaction"><span class="pre">transaction.Transaction</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.register_transaction_block" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">register_transaction_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transaction</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#transaction.Transaction" title="transaction.Transaction"><span class="pre">transaction.Transaction</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.register_transaction_block" title="Permalink to this definition"></a></dt>
 <dd><p>This function register the object transaction in the current block
 :param transaction: the transaction to be added to the block
 :type transaction: Object&lt;Transaction&gt;</p>
@@ -155,7 +210,7 @@ and a random hashed account
 
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.set_blockchain_hash">
-<span class="sig-name descname"><span class="pre">set_blockchain_hash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hash_blockchain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.set_blockchain_hash" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_blockchain_hash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hash_blockchain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.set_blockchain_hash" title="Permalink to this definition"></a></dt>
 <dd><p>This function adds the hash of the blockchain
 each time a block is added
 :param hash_blockchain: the hash of the list of blocks in the blockchain
@@ -164,7 +219,7 @@ each time a block is added
 
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.user_exists">
-<span class="sig-name descname"><span class="pre">user_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.user_exists" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">user_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.user_exists" title="Permalink to this definition"></a></dt>
 <dd><p>This function search a user in public ledger
 :param user: user to search
 :returns: a boolean if the user exists or no
@@ -173,7 +228,7 @@ each time a block is added
 
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.users">
-<span class="sig-name descname"><span class="pre">users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.users" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.users" title="Permalink to this definition"></a></dt>
 <dd><p>Return a dictionary of users on the public ledger
 :returns: the public ledger
 :rtype: list</p>
@@ -181,7 +236,7 @@ each time a block is added
 
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.verify_block_length">
-<span class="sig-name descname"><span class="pre">verify_block_length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.verify_block_length" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">verify_block_length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.verify_block_length" title="Permalink to this definition"></a></dt>
 <dd><p>This function verify the block length</p>
 </dd></dl>
 
@@ -189,11 +244,11 @@ each time a block is added
 
 </section>
 <span class="target" id="module-main_blockchain"></span><section id="blockchain-main-blockchain">
-<h1>Blockchain: Main Blockchain<a class="headerlink" href="#blockchain-main-blockchain" title="Permalink to this headline">¶</a></h1>
+<h1>Blockchain: Main Blockchain<a class="headerlink" href="#blockchain-main-blockchain" title="Permalink to this headline"></a></h1>
 <p>This module run the blockchain app</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="main_blockchain.main">
-<span class="sig-prename descclassname"><span class="pre">main_blockchain.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_blockchain.main" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">main_blockchain.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main_blockchain.main" title="Permalink to this definition"></a></dt>
 <dd><p>This function allows the user to start the app Blockchain
 with or without debug mode, and put the ip and port
 of the blockchain app</p>
@@ -201,18 +256,18 @@ of the blockchain app</p>
 
 </section>
 <span class="target" id="module-service_blockchain"></span><section id="blockchain-service-blockchain">
-<h1>Blockchain: Service Blockchain<a class="headerlink" href="#blockchain-service-blockchain" title="Permalink to this headline">¶</a></h1>
+<h1>Blockchain: Service Blockchain<a class="headerlink" href="#blockchain-service-blockchain" title="Permalink to this headline"></a></h1>
 <p>This a package that contains the main function for the service blockchain</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_blockchain.block_chain">
-<span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">block_chain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.block_chain" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">block_chain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.block_chain" title="Permalink to this definition"></a></dt>
 <dd><p>This web service show the blockchain
 url: <a class="reference external" href="http://127.0.0.1:5002/">http://127.0.0.1:5002/</a></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="service_blockchain.consult_address">
-<span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">consult_address</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.consult_address" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">consult_address</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.consult_address" title="Permalink to this definition"></a></dt>
 <dd><p>This web service consult with the blockchain the
 address, if exists in the blockchain
 url: <a class="reference external" href="http://127.0.0.1:5002/consult_address">http://127.0.0.1:5002/consult_address</a></p>
@@ -220,7 +275,7 @@ url: <a class="reference external" href="http://127.0.0.1:5002/consult_address">
 
 <dl class="py function">
 <dt class="sig sig-object py" id="service_blockchain.new_account">
-<span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">new_account</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.new_account" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">new_account</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.new_account" title="Permalink to this definition"></a></dt>
 <dd><p>This web service create a new account for a user, this service return
 a number of wallet and that has
 url: <a class="reference external" href="http://127.0.0.1:5002/new_account">http://127.0.0.1:5002/new_account</a></p>
@@ -228,7 +283,7 @@ url: <a class="reference external" href="http://127.0.0.1:5002/new_account">http
 
 <dl class="py function">
 <dt class="sig sig-object py" id="service_blockchain.register_data">
-<span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">register_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.register_data" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">register_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.register_data" title="Permalink to this definition"></a></dt>
 <dd><p>This web service add the transaction to the
 block, and then when the block is full, the block is 
 aggregated to the blockchain
@@ -237,47 +292,46 @@ url: <a class="reference external" href="http://127.0.0.1:5002/register_data/">h
 
 <dl class="py function">
 <dt class="sig sig-object py" id="service_blockchain.run_services_blockchain">
-<span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">run_services_blockchain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.run_services_blockchain" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">run_services_blockchain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.run_services_blockchain" title="Permalink to this definition"></a></dt>
 <dd><p>This function getup the service blockchain</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="service_blockchain.users">
-<span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.users" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.users" title="Permalink to this definition"></a></dt>
 <dd><p>This web service return a list of user in the public ledger with format json</p>
 <p>url: <a class="reference external" href="http://127.0.0.1:5002/users">http://127.0.0.1:5002/users</a></p>
 </dd></dl>
 
 </section>
-<span class="target" id="module-service"></span><section id="register-services-register-class">
-<h1>Register: Services Register class<a class="headerlink" href="#register-services-register-class" title="Permalink to this headline">¶</a></h1>
-<p>This module consume the service from
-the coordinator with the required data</p>
+<span class="target" id="module-consume_service_blockchain"></span><section id="blockchain-services-class">
+<h1>Blockchain: Services class<a class="headerlink" href="#blockchain-services-class" title="Permalink to this headline"></a></h1>
+<p>This module consume the service</p>
 </section>
 <span class="target" id="module-transaction"></span><section id="blockchain-class-transaction">
-<h1>Blockchain: Class Transaction<a class="headerlink" href="#blockchain-class-transaction" title="Permalink to this headline">¶</a></h1>
+<h1>Blockchain: Class Transaction<a class="headerlink" href="#blockchain-class-transaction" title="Permalink to this headline"></a></h1>
 <p>This module saves the transaction in a Object</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="transaction.Transaction">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">transaction.</span></span><span class="sig-name descname"><span class="pre">Transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_u</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_u</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transaction.Transaction" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">transaction.</span></span><span class="sig-name descname"><span class="pre">Transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_u</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_u</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#transaction.Transaction" title="Permalink to this definition"></a></dt>
 <dd><p>This class belongs to a transaction that is going to 
 save in a block, then when the block is full, the block
 is going to be part of the blockchain</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="transaction.Transaction.get_amount">
-<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transaction.Transaction.get_amount" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transaction.Transaction.get_amount" title="Permalink to this definition"></a></dt>
 <dd><p>This function allows to get the money of a transaction</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transaction.Transaction.get_from_u">
-<span class="sig-name descname"><span class="pre">get_from_u</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transaction.Transaction.get_from_u" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_from_u</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transaction.Transaction.get_from_u" title="Permalink to this definition"></a></dt>
 <dd><p>This function allows to get the user who sends the money</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transaction.Transaction.get_to_u">
-<span class="sig-name descname"><span class="pre">get_to_u</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transaction.Transaction.get_to_u" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_to_u</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transaction.Transaction.get_to_u" title="Permalink to this definition"></a></dt>
 <dd><p>This function allows to get the user who receives the money</p>
 </dd></dl>
 
@@ -285,17 +339,17 @@ is going to be part of the blockchain</p>
 
 </section>
 <span class="target" id="module-wallet"></span><section id="blockchain-class-wallet">
-<h1>Blockchain: Class Wallet<a class="headerlink" href="#blockchain-class-wallet" title="Permalink to this headline">¶</a></h1>
+<h1>Blockchain: Class Wallet<a class="headerlink" href="#blockchain-class-wallet" title="Permalink to this headline"></a></h1>
 <p>This module create the wallet for the users, an unique number account,
 but this number is anonymous, then use the user name to describe the 
 transactions</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="wallet.Wallet">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">wallet.</span></span><span class="sig-name descname"><span class="pre">Wallet</span></span><a class="headerlink" href="#wallet.Wallet" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">wallet.</span></span><span class="sig-name descname"><span class="pre">Wallet</span></span><a class="headerlink" href="#wallet.Wallet" title="Permalink to this definition"></a></dt>
 <dd><p>This class create the wallet for the user</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="wallet.Wallet.generate_new_wallet">
-<span class="sig-name descname"><span class="pre">generate_new_wallet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wallet.Wallet.generate_new_wallet" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">generate_new_wallet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wallet.Wallet.generate_new_wallet" title="Permalink to this definition"></a></dt>
 <dd><p>This function generated a number account random
 using a function hash with a especial concat for valid
 the form</p>
@@ -306,22 +360,34 @@ the form</p>
 </section>
 
 
-      </div>
-      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
-      
-        <p>
-        «&#160;&#160;<a href="index.html">Welcome to blockchain’s documentation!</a>
-        &#160;&#160;::&#160;&#160;
-        <a class="uplink" href="index.html">Contents</a>
-        &#160;&#160;::&#160;&#160;
-        <a href="opencloser.html">OpenCloser: Main OpenCloser</a>&#160;&#160;»
-        </p>
-
-      </div>
-
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, Edwin Becerra, Nilson Vargas.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to blockchain’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="opencloser.html" class="btn btn-neutral float-right" title="OpenCloser: Config" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  </body>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Edwin Becerra, Nilson Vargas.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

@@ -1,4 +1,4 @@
-.. automodule:: config
+.. automodule:: config_opencloser
    :members:
    
 .. automodule:: main_opencloser
