@@ -1,3 +1,9 @@
+====================
+Blockchain component
+====================
+
+This page is for the documentacion of Blockchain.
+
 .. automodule:: config_blockchain
    :members:
    

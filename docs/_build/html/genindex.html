@@ -1,601 +1,719 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; Blockchain simulator 1.0 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-    <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="#" />
-    <link rel="search" title="Search" href="search.html" /> 
-</head>
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="search.html" />
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Blockchain simulator
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/><title>Index - Blockchain simulator 1.0 documentation</title>
+<link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Blockchain simulator 1.0 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">Blockchain simulator 1.0 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="blockchain.html">Blockchain: Config</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blockchain.html#blockchain-class-block">Blockchain: Class Block</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blockchain.html#blockchain-class-blockchain">Blockchain: Class Blockchain</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blockchain.html#blockchain-main-blockchain">Blockchain: Main Blockchain</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blockchain.html#blockchain-service-blockchain">Blockchain: Service Blockchain</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blockchain.html#blockchain-services-class">Blockchain: Services class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blockchain.html#blockchain-class-transaction">Blockchain: Class Transaction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blockchain.html#blockchain-class-wallet">Blockchain: Class Wallet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="opencloser.html">OpenCloser: Config</a></li>
-<li class="toctree-l1"><a class="reference internal" href="opencloser.html#opencloser-main-opencloser">OpenCloser: Main OpenCloser</a></li>
-<li class="toctree-l1"><a class="reference internal" href="opencloser.html#opencloser-class-opencloser">OpenCloser: Class OpenCloser</a></li>
-<li class="toctree-l1"><a class="reference internal" href="opencloser.html#opencloser-service-opencloser">OpenCloser: Service OpenCloser</a></li>
-<li class="toctree-l1"><a class="reference internal" href="register.html">Register: Config</a></li>
-<li class="toctree-l1"><a class="reference internal" href="register.html#register-main-register">Register: Main Register</a></li>
-<li class="toctree-l1"><a class="reference internal" href="register.html#register-register-class">Register: Register class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="register.html#register-service-register">Register: Service Register</a></li>
-<li class="toctree-l1"><a class="reference internal" href="register.html#register-services-register-class">Register: Services Register class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="coordinator.html">Coordinator: Service Coordinator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="coordinator.html#coordinator-config">Coordinator: Config</a></li>
-<li class="toctree-l1"><a class="reference internal" href="coordinator.html#coordinator-middleware">Coordinator: Middleware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="coordinator.html#coordinator-class-controller">Coordinator: Class Controller</a></li>
-<li class="toctree-l1"><a class="reference internal" href="coordinator.html#coordinator-main-coordinator">Coordinator: Main coordinator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html">Blockchain component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opencloser.html">OpenCloser component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="register.html">Register component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinator.html">Coordinator component</a></li>
 </ul>
 
-        </div>
+</div>
+</div>
       </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Blockchain simulator</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Index</li>
-      <li class="wy-breadcrumbs-aside">
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- <a href="#A"><strong>A</strong></a>
- | <a href="#B"><strong>B</strong></a>
- | <a href="#C"><strong>C</strong></a>
- | <a href="#G"><strong>G</strong></a>
- | <a href="#H"><strong>H</strong></a>
- | <a href="#L"><strong>L</strong></a>
- | <a href="#M"><strong>M</strong></a>
- | <a href="#N"><strong>N</strong></a>
- | <a href="#O"><strong>O</strong></a>
- | <a href="#R"><strong>R</strong></a>
- | <a href="#S"><strong>S</strong></a>
- | <a href="#T"><strong>T</strong></a>
- | <a href="#U"><strong>U</strong></a>
- | <a href="#V"><strong>V</strong></a>
- | <a href="#W"><strong>W</strong></a>
- 
-</div>
-<h2 id="A">A</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blockchain.html#blockchain.Blockchain.account_exists">account_exists() (blockchain.Blockchain method)</a>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          
+<section class="genindex-section">
+  <h1 id="index">Index</h1>
+  <div class="genindex-jumpbox"><a href="#A"><strong>A</strong></a> | <a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#N"><strong>N</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#U"><strong>U</strong></a> | <a href="#V"><strong>V</strong></a> | <a href="#W"><strong>W</strong></a></div>
+</section>
+<section id="A" class="genindex-section">
+  <h2>A</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="blockchain.html#blockchain.Blockchain.account_exists">account_exists() (blockchain.Blockchain method)</a>
 </li>
-      <li><a href="blockchain.html#block.Block.add_hashes">add_hashes() (block.Block method)</a>
+        <li><a href="blockchain.html#block.Block.add_hashes">add_hashes() (block.Block method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blockchain.html#blockchain.Blockchain.add_new_block">add_new_block() (blockchain.Blockchain method)</a>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="blockchain.html#blockchain.Blockchain.add_new_block">add_new_block() (blockchain.Blockchain method)</a>
 </li>
-      <li><a href="blockchain.html#block.Block.add_nonce">add_nonce() (block.Block method)</a>
+        <li><a href="blockchain.html#block.Block.add_nonce">add_nonce() (block.Block method)</a>
 </li>
-      <li><a href="blockchain.html#block.Block.add_transaction">add_transaction() (block.Block method)</a>
+        <li><a href="blockchain.html#block.Block.add_transaction">add_transaction() (block.Block method)</a>
 </li>
-  </ul></td>
-</tr></table>
+    </ul></td>
+  </tr></table>
+</section>
 
-<h2 id="B">B</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
+<section id="B" class="genindex-section">
+  <h2>B</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
     block
 
-      <ul>
-        <li><a href="blockchain.html#module-block">module</a>
+        <ul>
+          <li><a href="blockchain.html#module-block">module</a>
 </li>
-      </ul></li>
-      <li><a href="blockchain.html#block.Block">Block (class in block)</a>
+        </ul></li>
+        <li><a href="blockchain.html#block.Block">Block (class in block)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blockchain.html#service_blockchain.block_chain">block_chain() (in module service_blockchain)</a>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="blockchain.html#service_blockchain.block_chain">block_chain() (in module service_blockchain)</a>
 </li>
-      <li>
+        <li>
     blockchain
 
-      <ul>
-        <li><a href="blockchain.html#module-blockchain">module</a>
+        <ul>
+          <li><a href="blockchain.html#module-blockchain">module</a>
 </li>
-      </ul></li>
-      <li><a href="blockchain.html#blockchain.Blockchain">Blockchain (class in blockchain)</a>
+        </ul></li>
+        <li><a href="blockchain.html#blockchain.Blockchain">Blockchain (class in blockchain)</a>
 </li>
-  </ul></td>
-</tr></table>
+    </ul></td>
+  </tr></table>
+</section>
 
-<h2 id="C">C</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blockchain.html#blockchain.Blockchain.calculate_founds_blockchain">calculate_founds_blockchain() (blockchain.Blockchain method)</a>
+<section id="C" class="genindex-section">
+  <h2>C</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="blockchain.html#blockchain.Blockchain.calculate_founds_blockchain">calculate_founds_blockchain() (blockchain.Blockchain method)</a>
 </li>
-      <li><a href="blockchain.html#blockchain.Blockchain.close_block">close_block() (blockchain.Blockchain method)</a>
+        <li><a href="blockchain.html#blockchain.Blockchain.close_block">close_block() (blockchain.Blockchain method)</a>
 
-      <ul>
-        <li><a href="coordinator.html#controller.Controller.close_block">(controller.Controller static method)</a>
+        <ul>
+          <li><a href="coordinator.html#controller.Controller.close_block">(controller.Controller static method)</a>
 </li>
-        <li><a href="coordinator.html#service_coordinator.close_block">(in module service_coordinator)</a>
+          <li><a href="coordinator.html#service_coordinator.close_block">(in module service_coordinator)</a>
 </li>
-        <li><a href="coordinator.html#middleware.Middleware.close_block">(middleware.Middleware method)</a>
+          <li><a href="coordinator.html#middleware.Middleware.close_block">(middleware.Middleware method)</a>
 </li>
-      </ul></li>
-      <li><a href="opencloser.html#service_opencloser.closer_block">closer_block() (in module service_opencloser)</a>
+        </ul></li>
+        <li><a href="opencloser.html#service_opencloser.closer_block">closer_block() (in module service_opencloser)</a>
 </li>
-      <li>
+        <li>
     config_blockchain
 
-      <ul>
-        <li><a href="blockchain.html#module-config_blockchain">module</a>
+        <ul>
+          <li><a href="blockchain.html#module-config_blockchain">module</a>
 </li>
-      </ul></li>
-      <li>
+        </ul></li>
+        <li>
     config_coordinator
 
-      <ul>
-        <li><a href="coordinator.html#module-config_coordinator">module</a>
+        <ul>
+          <li><a href="coordinator.html#module-config_coordinator">module</a>
 </li>
-      </ul></li>
-      <li>
+        </ul></li>
+        <li>
     config_opencloser
 
-      <ul>
-        <li><a href="opencloser.html#module-config_opencloser">module</a>
+        <ul>
+          <li><a href="opencloser.html#module-config_opencloser">module</a>
 </li>
-      </ul></li>
-      <li>
+        </ul></li>
+        <li>
     config_register
 
-      <ul>
-        <li><a href="register.html#module-config_register">module</a>
+        <ul>
+          <li><a href="register.html#module-config_register">module</a>
 </li>
-      </ul></li>
-      <li><a href="blockchain.html#service_blockchain.consult_address">consult_address() (in module service_blockchain)</a>
+        </ul></li>
+        <li><a href="blockchain.html#service_blockchain.consult_address">consult_address() (in module service_blockchain)</a>
 </li>
-      <li><a href="coordinator.html#middleware.Middleware.consult_found_block_chain_service">consult_found_block_chain_service() (middleware.Middleware method)</a>
+        <li><a href="coordinator.html#middleware.Middleware.consult_found_block_chain_service">consult_found_block_chain_service() (middleware.Middleware method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="coordinator.html#controller.Controller.consult_founds">consult_founds() (controller.Controller static method)</a>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="coordinator.html#controller.Controller.consult_founds">consult_founds() (controller.Controller static method)</a>
 
-      <ul>
-        <li><a href="coordinator.html#service_coordinator.consult_founds">(in module service_coordinator)</a>
+        <ul>
+          <li><a href="coordinator.html#service_coordinator.consult_founds">(in module service_coordinator)</a>
 </li>
-      </ul></li>
-      <li><a href="blockchain.html#blockchain.Blockchain.consult_founds_wallet">consult_founds_wallet() (blockchain.Blockchain method)</a>
+        </ul></li>
+        <li><a href="blockchain.html#blockchain.Blockchain.consult_founds_wallet">consult_founds_wallet() (blockchain.Blockchain method)</a>
 </li>
-      <li><a href="coordinator.html#middleware.Middleware.consume_register_data">consume_register_data() (middleware.Middleware method)</a>
+        <li><a href="coordinator.html#middleware.Middleware.consume_register_data">consume_register_data() (middleware.Middleware method)</a>
 </li>
-      <li><a href="coordinator.html#middleware.Middleware.consume_register_transaction">consume_register_transaction() (middleware.Middleware method)</a>
+        <li><a href="coordinator.html#middleware.Middleware.consume_register_transaction">consume_register_transaction() (middleware.Middleware method)</a>
 </li>
-      <li><a href="coordinator.html#middleware.Middleware.consume_service">consume_service() (middleware.Middleware method)</a>
+        <li><a href="coordinator.html#middleware.Middleware.consume_service">consume_service() (middleware.Middleware method)</a>
 </li>
-      <li>
+        <li>
     consume_service_blockchain
 
-      <ul>
-        <li><a href="blockchain.html#module-consume_service_blockchain">module</a>
+        <ul>
+          <li><a href="blockchain.html#module-consume_service_blockchain">module</a>
 </li>
-      </ul></li>
-      <li>
+        </ul></li>
+        <li>
     consume_service_register
 
-      <ul>
-        <li><a href="register.html#module-consume_service_register">module</a>
+        <ul>
+          <li><a href="register.html#module-consume_service_register">module</a>
 </li>
-      </ul></li>
-      <li>
+        </ul></li>
+        <li>
     controller
 
-      <ul>
-        <li><a href="coordinator.html#module-controller">module</a>
+        <ul>
+          <li><a href="coordinator.html#module-controller">module</a>
 </li>
-      </ul></li>
-      <li><a href="coordinator.html#controller.Controller">Controller (class in controller)</a>
+        </ul></li>
+        <li><a href="coordinator.html#controller.Controller">Controller (class in controller)</a>
 </li>
-      <li><a href="blockchain.html#block.Block.count_transactions">count_transactions() (block.Block method)</a>
+        <li><a href="blockchain.html#block.Block.count_transactions">count_transactions() (block.Block method)</a>
 </li>
-      <li><a href="coordinator.html#controller.Controller.create_user">create_user() (controller.Controller static method)</a>
+        <li><a href="coordinator.html#controller.Controller.create_user">create_user() (controller.Controller static method)</a>
 </li>
-      <li><a href="coordinator.html#service_coordinator.create_wallet">create_wallet() (in module service_coordinator)</a>
+        <li><a href="coordinator.html#service_coordinator.create_wallet">create_wallet() (in module service_coordinator)</a>
 </li>
-  </ul></td>
-</tr></table>
+    </ul></td>
+  </tr></table>
+</section>
 
-<h2 id="G">G</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blockchain.html#wallet.Wallet.generate_new_wallet">generate_new_wallet() (wallet.Wallet method)</a>
+<section id="G" class="genindex-section">
+  <h2>G</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="blockchain.html#wallet.Wallet.generate_new_wallet">generate_new_wallet() (wallet.Wallet method)</a>
 </li>
-      <li><a href="blockchain.html#blockchain.Blockchain.generate_wallet">generate_wallet() (blockchain.Blockchain method)</a>
+        <li><a href="blockchain.html#blockchain.Blockchain.generate_wallet">generate_wallet() (blockchain.Blockchain method)</a>
 </li>
-      <li><a href="blockchain.html#transaction.Transaction.get_amount">get_amount() (transaction.Transaction method)</a>
+        <li><a href="blockchain.html#transaction.Transaction.get_amount">get_amount() (transaction.Transaction method)</a>
 </li>
-      <li><a href="coordinator.html#middleware.Middleware.get_block_chain">get_block_chain() (middleware.Middleware method)</a>
+        <li><a href="coordinator.html#middleware.Middleware.get_block_chain">get_block_chain() (middleware.Middleware method)</a>
 </li>
-      <li><a href="blockchain.html#transaction.Transaction.get_from_u">get_from_u() (transaction.Transaction method)</a>
+        <li><a href="blockchain.html#transaction.Transaction.get_from_u">get_from_u() (transaction.Transaction method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="coordinator.html#service_coordinator.get_something">get_something() (in module service_coordinator)</a>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="coordinator.html#service_coordinator.get_something">get_something() (in module service_coordinator)</a>
 </li>
-      <li><a href="blockchain.html#transaction.Transaction.get_to_u">get_to_u() (transaction.Transaction method)</a>
+        <li><a href="blockchain.html#transaction.Transaction.get_to_u">get_to_u() (transaction.Transaction method)</a>
 </li>
-      <li><a href="blockchain.html#block.Block.get_transaction_list">get_transaction_list() (block.Block method)</a>
+        <li><a href="blockchain.html#block.Block.get_transaction_list">get_transaction_list() (block.Block method)</a>
 </li>
-      <li><a href="coordinator.html#middleware.Middleware.get_user_list">get_user_list() (middleware.Middleware method)</a>
+        <li><a href="coordinator.html#middleware.Middleware.get_user_list">get_user_list() (middleware.Middleware method)</a>
 </li>
-      <li><a href="coordinator.html#middleware.Middleware.get_wallet">get_wallet() (middleware.Middleware method)</a>
+        <li><a href="coordinator.html#middleware.Middleware.get_wallet">get_wallet() (middleware.Middleware method)</a>
 </li>
-  </ul></td>
-</tr></table>
+    </ul></td>
+  </tr></table>
+</section>
 
-<h2 id="H">H</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="opencloser.html#opencloser.OpenCloser.hashBlock">hashBlock() (opencloser.OpenCloser static method)</a>
+<section id="H" class="genindex-section">
+  <h2>H</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="opencloser.html#opencloser.OpenCloser.hashBlock">hashBlock() (opencloser.OpenCloser static method)</a>
 </li>
-  </ul></td>
-</tr></table>
+    </ul></td>
+  </tr></table>
+</section>
 
-<h2 id="L">L</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="coordinator.html#middleware.Middleware.load_services">load_services() (middleware.Middleware method)</a>
+<section id="L" class="genindex-section">
+  <h2>L</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="coordinator.html#middleware.Middleware.load_services">load_services() (middleware.Middleware method)</a>
 </li>
-  </ul></td>
-</tr></table>
+    </ul></td>
+  </tr></table>
+</section>
 
-<h2 id="M">M</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blockchain.html#main_blockchain.main">main() (in module main_blockchain)</a>
+<section id="M" class="genindex-section">
+  <h2>M</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="blockchain.html#main_blockchain.main">main() (in module main_blockchain)</a>
 
-      <ul>
-        <li><a href="coordinator.html#main_coordinator.main">(in module main_coordinator)</a>
+        <ul>
+          <li><a href="coordinator.html#main_coordinator.main">(in module main_coordinator)</a>
 </li>
-        <li><a href="opencloser.html#main_opencloser.main">(in module main_opencloser)</a>
+          <li><a href="opencloser.html#main_opencloser.main">(in module main_opencloser)</a>
 </li>
-        <li><a href="register.html#main_register.main">(in module main_register)</a>
+          <li><a href="register.html#main_register.main">(in module main_register)</a>
 </li>
-      </ul></li>
-      <li>
+        </ul></li>
+        <li>
     main_blockchain
 
-      <ul>
-        <li><a href="blockchain.html#module-main_blockchain">module</a>
+        <ul>
+          <li><a href="blockchain.html#module-main_blockchain">module</a>
 </li>
-      </ul></li>
-      <li>
+        </ul></li>
+        <li>
     main_coordinator
 
-      <ul>
-        <li><a href="coordinator.html#module-main_coordinator">module</a>
+        <ul>
+          <li><a href="coordinator.html#module-main_coordinator">module</a>
 </li>
-      </ul></li>
-      <li>
+        </ul></li>
+        <li>
     main_opencloser
 
-      <ul>
-        <li><a href="opencloser.html#module-main_opencloser">module</a>
+        <ul>
+          <li><a href="opencloser.html#module-main_opencloser">module</a>
 </li>
-      </ul></li>
-      <li>
+        </ul></li>
+        <li>
     main_register
 
-      <ul>
-        <li><a href="register.html#module-main_register">module</a>
+        <ul>
+          <li><a href="register.html#module-main_register">module</a>
 </li>
-      </ul></li>
-      <li>
+        </ul></li>
+        <li>
     middleware
 
-      <ul>
-        <li><a href="coordinator.html#module-middleware">module</a>
+        <ul>
+          <li><a href="coordinator.html#module-middleware">module</a>
 </li>
-      </ul></li>
-      <li><a href="coordinator.html#middleware.Middleware">Middleware (class in middleware)</a>
+        </ul></li>
+        <li><a href="coordinator.html#middleware.Middleware">Middleware (class in middleware)</a>
 </li>
-      <li>
+        <li>
     module
 
-      <ul>
-        <li><a href="blockchain.html#module-block">block</a>
+        <ul>
+          <li><a href="blockchain.html#module-block">block</a>
 </li>
-        <li><a href="blockchain.html#module-blockchain">blockchain</a>
+          <li><a href="blockchain.html#module-blockchain">blockchain</a>
 </li>
-        <li><a href="blockchain.html#module-config_blockchain">config_blockchain</a>
+          <li><a href="blockchain.html#module-config_blockchain">config_blockchain</a>
 </li>
-        <li><a href="coordinator.html#module-config_coordinator">config_coordinator</a>
+          <li><a href="coordinator.html#module-config_coordinator">config_coordinator</a>
 </li>
-        <li><a href="opencloser.html#module-config_opencloser">config_opencloser</a>
+          <li><a href="opencloser.html#module-config_opencloser">config_opencloser</a>
 </li>
-        <li><a href="register.html#module-config_register">config_register</a>
+          <li><a href="register.html#module-config_register">config_register</a>
 </li>
-        <li><a href="blockchain.html#module-consume_service_blockchain">consume_service_blockchain</a>
+          <li><a href="blockchain.html#module-consume_service_blockchain">consume_service_blockchain</a>
 </li>
-        <li><a href="register.html#module-consume_service_register">consume_service_register</a>
+          <li><a href="register.html#module-consume_service_register">consume_service_register</a>
 </li>
-        <li><a href="coordinator.html#module-controller">controller</a>
+          <li><a href="coordinator.html#module-controller">controller</a>
 </li>
-        <li><a href="blockchain.html#module-main_blockchain">main_blockchain</a>
+          <li><a href="blockchain.html#module-main_blockchain">main_blockchain</a>
 </li>
-        <li><a href="coordinator.html#module-main_coordinator">main_coordinator</a>
+          <li><a href="coordinator.html#module-main_coordinator">main_coordinator</a>
 </li>
-        <li><a href="opencloser.html#module-main_opencloser">main_opencloser</a>
+          <li><a href="opencloser.html#module-main_opencloser">main_opencloser</a>
 </li>
-        <li><a href="register.html#module-main_register">main_register</a>
+          <li><a href="register.html#module-main_register">main_register</a>
 </li>
-        <li><a href="coordinator.html#module-middleware">middleware</a>
+          <li><a href="coordinator.html#module-middleware">middleware</a>
 </li>
-        <li><a href="opencloser.html#module-opencloser">opencloser</a>
+          <li><a href="opencloser.html#module-opencloser">opencloser</a>
 </li>
-        <li><a href="register.html#module-register">register</a>
+          <li><a href="register.html#module-register">register</a>
 </li>
-        <li><a href="blockchain.html#module-service_blockchain">service_blockchain</a>
+          <li><a href="blockchain.html#module-service_blockchain">service_blockchain</a>
 </li>
-        <li><a href="coordinator.html#module-service_coordinator">service_coordinator</a>
+          <li><a href="coordinator.html#module-service_coordinator">service_coordinator</a>
 </li>
-        <li><a href="opencloser.html#module-service_opencloser">service_opencloser</a>
+          <li><a href="opencloser.html#module-service_opencloser">service_opencloser</a>
 </li>
-        <li><a href="register.html#module-service_register">service_register</a>
+          <li><a href="register.html#module-service_register">service_register</a>
 </li>
-        <li><a href="blockchain.html#module-transaction">transaction</a>
+          <li><a href="blockchain.html#module-transaction">transaction</a>
 </li>
-        <li><a href="blockchain.html#module-wallet">wallet</a>
+          <li><a href="blockchain.html#module-wallet">wallet</a>
 </li>
-      </ul></li>
-  </ul></td>
-</tr></table>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
 
-<h2 id="N">N</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blockchain.html#service_blockchain.new_account">new_account() (in module service_blockchain)</a>
+<section id="N" class="genindex-section">
+  <h2>N</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="blockchain.html#service_blockchain.new_account">new_account() (in module service_blockchain)</a>
 </li>
-  </ul></td>
-</tr></table>
+    </ul></td>
+  </tr></table>
+</section>
 
-<h2 id="O">O</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
+<section id="O" class="genindex-section">
+  <h2>O</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
     opencloser
 
-      <ul>
-        <li><a href="opencloser.html#module-opencloser">module</a>
+        <ul>
+          <li><a href="opencloser.html#module-opencloser">module</a>
 </li>
-      </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="opencloser.html#opencloser.OpenCloser">OpenCloser (class in opencloser)</a>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="opencloser.html#opencloser.OpenCloser">OpenCloser (class in opencloser)</a>
 </li>
-  </ul></td>
-</tr></table>
+    </ul></td>
+  </tr></table>
+</section>
 
-<h2 id="R">R</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
+<section id="R" class="genindex-section">
+  <h2>R</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
     register
 
-      <ul>
-        <li><a href="register.html#module-register">module</a>
+        <ul>
+          <li><a href="register.html#module-register">module</a>
 </li>
-      </ul></li>
-      <li><a href="register.html#register.Register">Register (class in register)</a>
+        </ul></li>
+        <li><a href="register.html#register.Register">Register (class in register)</a>
 </li>
-      <li><a href="coordinator.html#controller.Controller.register_data">register_data() (controller.Controller static method)</a>
+        <li><a href="coordinator.html#controller.Controller.register_data">register_data() (controller.Controller static method)</a>
 
-      <ul>
-        <li><a href="blockchain.html#service_blockchain.register_data">(in module service_blockchain)</a>
+        <ul>
+          <li><a href="blockchain.html#service_blockchain.register_data">(in module service_blockchain)</a>
 </li>
-        <li><a href="coordinator.html#service_coordinator.register_data">(in module service_coordinator)</a>
+          <li><a href="coordinator.html#service_coordinator.register_data">(in module service_coordinator)</a>
 </li>
-      </ul></li>
-      <li><a href="coordinator.html#controller.Controller.register_transaction">register_transaction() (controller.Controller static method)</a>
+        </ul></li>
+        <li><a href="coordinator.html#controller.Controller.register_transaction">register_transaction() (controller.Controller static method)</a>
 
-      <ul>
-        <li><a href="register.html#service_register.register_transaction">(in module service_register)</a>
+        <ul>
+          <li><a href="register.html#service_register.register_transaction">(in module service_register)</a>
 </li>
-        <li><a href="register.html#register.Register.register_transaction">(register.Register static method)</a>
+          <li><a href="register.html#register.Register.register_transaction">(register.Register static method)</a>
 </li>
-      </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blockchain.html#blockchain.Blockchain.register_transaction_block">register_transaction_block() (blockchain.Blockchain method)</a>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="blockchain.html#blockchain.Blockchain.register_transaction_block">register_transaction_block() (blockchain.Blockchain method)</a>
 </li>
-      <li><a href="coordinator.html#service_coordinator.run_service_coordinator">run_service_coordinator() (in module service_coordinator)</a>
+        <li><a href="coordinator.html#service_coordinator.run_service_coordinator">run_service_coordinator() (in module service_coordinator)</a>
 </li>
-      <li><a href="opencloser.html#service_opencloser.run_service_opencloser">run_service_opencloser() (in module service_opencloser)</a>
+        <li><a href="opencloser.html#service_opencloser.run_service_opencloser">run_service_opencloser() (in module service_opencloser)</a>
 </li>
-      <li><a href="register.html#service_register.run_service_register">run_service_register() (in module service_register)</a>
+        <li><a href="register.html#service_register.run_service_register">run_service_register() (in module service_register)</a>
 </li>
-      <li><a href="blockchain.html#service_blockchain.run_services_blockchain">run_services_blockchain() (in module service_blockchain)</a>
+        <li><a href="blockchain.html#service_blockchain.run_services_blockchain">run_services_blockchain() (in module service_blockchain)</a>
 </li>
-  </ul></td>
-</tr></table>
+    </ul></td>
+  </tr></table>
+</section>
 
-<h2 id="S">S</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
+<section id="S" class="genindex-section">
+  <h2>S</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
     service_blockchain
 
-      <ul>
-        <li><a href="blockchain.html#module-service_blockchain">module</a>
+        <ul>
+          <li><a href="blockchain.html#module-service_blockchain">module</a>
 </li>
-      </ul></li>
-      <li>
+        </ul></li>
+        <li>
     service_coordinator
 
-      <ul>
-        <li><a href="coordinator.html#module-service_coordinator">module</a>
+        <ul>
+          <li><a href="coordinator.html#module-service_coordinator">module</a>
 </li>
-      </ul></li>
-      <li>
+        </ul></li>
+        <li>
     service_opencloser
 
-      <ul>
-        <li><a href="opencloser.html#module-service_opencloser">module</a>
+        <ul>
+          <li><a href="opencloser.html#module-service_opencloser">module</a>
 </li>
-      </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
     service_register
 
-      <ul>
-        <li><a href="register.html#module-service_register">module</a>
+        <ul>
+          <li><a href="register.html#module-service_register">module</a>
 </li>
-      </ul></li>
-      <li><a href="blockchain.html#blockchain.Blockchain.set_blockchain_hash">set_blockchain_hash() (blockchain.Blockchain method)</a>
+        </ul></li>
+        <li><a href="blockchain.html#blockchain.Blockchain.set_blockchain_hash">set_blockchain_hash() (blockchain.Blockchain method)</a>
 </li>
-      <li><a href="coordinator.html#controller.Controller.show_block_chain">show_block_chain() (controller.Controller static method)</a>
+        <li><a href="coordinator.html#controller.Controller.show_block_chain">show_block_chain() (controller.Controller static method)</a>
 
-      <ul>
-        <li><a href="coordinator.html#service_coordinator.show_block_chain">(in module service_coordinator)</a>
+        <ul>
+          <li><a href="coordinator.html#service_coordinator.show_block_chain">(in module service_coordinator)</a>
 </li>
-      </ul></li>
-      <li><a href="coordinator.html#service_coordinator.show_users">show_users() (in module service_coordinator)</a>
+        </ul></li>
+        <li><a href="coordinator.html#service_coordinator.show_users">show_users() (in module service_coordinator)</a>
 </li>
-      <li><a href="coordinator.html#controller.Controller.show_wallets">show_wallets() (controller.Controller static method)</a>
+        <li><a href="coordinator.html#controller.Controller.show_wallets">show_wallets() (controller.Controller static method)</a>
 </li>
-  </ul></td>
-</tr></table>
+    </ul></td>
+  </tr></table>
+</section>
 
-<h2 id="T">T</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
+<section id="T" class="genindex-section">
+  <h2>T</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
     transaction
 
-      <ul>
-        <li><a href="blockchain.html#module-transaction">module</a>
+        <ul>
+          <li><a href="blockchain.html#module-transaction">module</a>
 </li>
-      </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blockchain.html#transaction.Transaction">Transaction (class in transaction)</a>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="blockchain.html#transaction.Transaction">Transaction (class in transaction)</a>
 </li>
-      <li><a href="coordinator.html#service_coordinator.transaction_register">transaction_register() (in module service_coordinator)</a>
+        <li><a href="coordinator.html#service_coordinator.transaction_register">transaction_register() (in module service_coordinator)</a>
 </li>
-  </ul></td>
-</tr></table>
+    </ul></td>
+  </tr></table>
+</section>
 
-<h2 id="U">U</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blockchain.html#blockchain.Blockchain.user_exists">user_exists() (blockchain.Blockchain method)</a>
+<section id="U" class="genindex-section">
+  <h2>U</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="blockchain.html#blockchain.Blockchain.user_exists">user_exists() (blockchain.Blockchain method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blockchain.html#blockchain.Blockchain.users">users() (blockchain.Blockchain method)</a>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="blockchain.html#blockchain.Blockchain.users">users() (blockchain.Blockchain method)</a>
 
-      <ul>
-        <li><a href="blockchain.html#service_blockchain.users">(in module service_blockchain)</a>
+        <ul>
+          <li><a href="blockchain.html#service_blockchain.users">(in module service_blockchain)</a>
 </li>
-      </ul></li>
-  </ul></td>
-</tr></table>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
 
-<h2 id="V">V</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blockchain.html#blockchain.Blockchain.verify_block_length">verify_block_length() (blockchain.Blockchain method)</a>
+<section id="V" class="genindex-section">
+  <h2>V</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="blockchain.html#blockchain.Blockchain.verify_block_length">verify_block_length() (blockchain.Blockchain method)</a>
 </li>
-  </ul></td>
-</tr></table>
+    </ul></td>
+  </tr></table>
+</section>
 
-<h2 id="W">W</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
+<section id="W" class="genindex-section">
+  <h2>W</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
     wallet
 
-      <ul>
-        <li><a href="blockchain.html#module-wallet">module</a>
+        <ul>
+          <li><a href="blockchain.html#module-wallet">module</a>
 </li>
-      </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="blockchain.html#wallet.Wallet">Wallet (class in wallet)</a>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="blockchain.html#wallet.Wallet">Wallet (class in wallet)</a>
 </li>
-  </ul></td>
-</tr></table>
+    </ul></td>
+  </tr></table>
+</section>
 
 
-
-           </div>
-          </div>
-          <footer>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2021, Edwin Becerra, Nilson Vargas.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+        </article>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
 
-</body>
+        <div class="related-information">
+              Copyright &#169; 2021, Edwin Becerra, Nilson Vargas |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/main.js"></script>
+    </body>
 </html>

@@ -1,3 +1,9 @@
+====================
+Register component
+====================
+
+This page is the documentation of Register
+
 .. automodule:: config_register
    :members:
    

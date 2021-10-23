@@ -1,3 +1,9 @@
+====================
+OpenCloser component
+====================
+
+This page is for the documentacion of OpenCloser.
+
 .. automodule:: config_opencloser
    :members:
    

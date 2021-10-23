@@ -1,3 +1,9 @@
+=====================
+Coordinator component
+=====================
+
+This page is the documentation of Coordinator
+
 .. automodule:: service_coordinator
    :members:
    
