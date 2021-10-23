@@ -6,7 +6,7 @@ This module consume the service
 '''
 
 import requests
-import config 
+import config_blockchain as config 
 
 class Services():
     def __init__(self):

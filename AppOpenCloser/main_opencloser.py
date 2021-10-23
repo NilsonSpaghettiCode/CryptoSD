@@ -5,7 +5,7 @@ OpenCloser: Main OpenCloser
 This module run the OpenCloser app
 '''
 from service_opencloser import run_service_opencloser
-import config
+import config_opencloser as config
 
 def main():
     '''

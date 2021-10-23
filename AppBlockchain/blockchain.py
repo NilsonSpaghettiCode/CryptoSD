@@ -6,7 +6,7 @@ This module create the instance of a block with the common atributes
 '''
 
 from flask.json import jsonify
-from service import Services
+from consume_service_blockchain import Services
 from block import Block
 from transaction import Transaction
 from wallet import Wallet

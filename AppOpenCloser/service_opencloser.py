@@ -1,6 +1,6 @@
 '''
 OpenCloser: Service OpenCloser
------------------------------
+---------------------------------
 
 This module contains the web service function
 for OpenCloser

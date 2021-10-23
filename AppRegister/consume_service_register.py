@@ -1,13 +1,13 @@
 '''
 Register: Services Register class
------------------------------
+----------------------------------
 
 This module consume the service from
 the coordinator with the required data
 '''
 
 import requests
-import config 
+import config_register as config
 
 class Services():
     def __init__(self):

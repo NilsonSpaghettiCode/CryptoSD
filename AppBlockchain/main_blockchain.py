@@ -7,7 +7,7 @@ This module run the blockchain app
 
 
 from service_blockchain import run_services_blockchain
-import config
+import config_blockchain as config
 
 def main():
     '''

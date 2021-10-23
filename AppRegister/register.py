@@ -7,7 +7,7 @@ with the functions required for validate
 the transactions
 '''
 
-from service import Services
+from consume_service_register import Services
 class Register():
     '''
     The class Register is the responsible of

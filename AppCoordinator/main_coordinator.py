@@ -6,7 +6,7 @@ This module run the coordinator app
 '''
 
 from service_coordinator import run_service_coordinator
-import config
+import config_coordinator as config
 
 def main():
     '''

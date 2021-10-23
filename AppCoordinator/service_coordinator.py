@@ -1,6 +1,6 @@
 '''
 Coordinator: Service Coordinator
------------------------------
+-----------------------------------
 
 This a package that contains the main function for the service coordinator
 '''

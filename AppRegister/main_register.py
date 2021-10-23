@@ -5,7 +5,7 @@ Register: Main Register
 This module run the register app
 '''
 
-import config
+import config_register as config
 from service_register import run_service_register
 def main():
     '''

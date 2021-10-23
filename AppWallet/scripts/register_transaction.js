@@ -51,7 +51,7 @@ function processError(error) {
 
 function setAlertSuccess(response) {
     //console.log(response)
-    if (response['activate']) {
+    if (response['active']) {
         let content_response_transaction = response['content']['transaction']
         let content_response = response['content']
 

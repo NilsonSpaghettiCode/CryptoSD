@@ -38,7 +38,8 @@ function processError(error) {
 
 function setAlertSucess(response) {
     console.log(response)
-    if (response['activate']) {
+    console.log(typeof(response['activate']))
+    if (response['active']) {
         let exists = response['content']['exists']
         if (exists) {
             alerts.className = "alert alert-success"

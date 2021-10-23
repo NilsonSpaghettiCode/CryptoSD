@@ -35,7 +35,7 @@ document.getElementById('btn_create').addEventListener('click', e => {
 function setAlertSucess(response) {
     console.log(response)
 
-    if (response['activate']) {
+    if (response['active']) {
         let exists = response['content']['exist']
         if (!exists) {
             alerts.className = "alert alert-success"

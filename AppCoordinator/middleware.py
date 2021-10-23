@@ -5,7 +5,7 @@ Coordinator: Middleware
 This module has functions that coordinate all the blockchain system
 '''
 
-from config import services
+from config_coordinator import services
 import requests
 from werkzeug.wrappers import response
 
