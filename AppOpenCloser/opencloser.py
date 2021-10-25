@@ -19,6 +19,7 @@ class OpenCloser():
         '''
         This function generate the hash (sha256) for the block
         and return it
+        
         :param block: the block to close
         :type block: Object  
         :returns: the hash of the block using the function sha256

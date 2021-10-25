@@ -17,6 +17,7 @@ class Block():
     def __init__(self, nonce:int = 0, transactions:list = [], hash_preview = str('0'*64), hash = ''):
         '''
         The constructor of the block
+        
         :param number_block: the current number of the block
         :type number_block: int
         :param nonce: the random nonce which is created to consolidate the block
@@ -52,6 +53,7 @@ class Block():
     def add_transaction(self, transaction:Transaction):
         '''
         This function adds the transaction to the block
+
         :param transaction: receives the object Transaction
         :type transaction: Object<Transaction>
         '''
@@ -68,6 +70,7 @@ class Block():
     def add_hashes(self, hash_preview_t = str('0'*64), hash_t=''):
         '''
         This function add the hashes to the block
+
         :param hash_preview_t: the hash of the last block in the blockchain
         :type hash_preview_t: hash
         :param hash_t: the hash of the current block

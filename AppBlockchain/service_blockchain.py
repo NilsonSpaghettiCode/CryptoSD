@@ -7,7 +7,7 @@ This a package that contains the main function for the service blockchain
 
 from blockchain import Blockchain
 from transaction import Transaction
-from flask import Flask, json, jsonify, request
+from flask import Flask, jsonify,request
   
 app = Flask(__name__)
 blockchain_s = Blockchain()

@@ -14,6 +14,7 @@ class Transaction():
     def __init__(self, from_u:str, to_u:str, amount:int):
         '''
         This is the constructor of transaction
+        
         :param from_u: the wallet who sends the money
         :type from_u: str
         :param to_u: the person who receives the crypto money

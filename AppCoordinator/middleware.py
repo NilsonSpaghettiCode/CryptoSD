@@ -7,7 +7,6 @@ This module has functions that coordinate all the blockchain system
 
 from config_coordinator import services
 import requests
-from werkzeug.wrappers import response
 
 class Middleware:
     '''
@@ -39,6 +38,7 @@ class Middleware:
         '''
         This function is used to consume a web service, and return a response, no matter
         if the communication fails
+
         :param type_method: the method where is going to pass the communication (POST/GET)
         :type param: str
         :param uri: the url where is located the web service to consume
@@ -63,6 +63,7 @@ class Middleware:
     def consult_found_block_chain_service(self, dict_parameters):
         '''
         This function allows to consume consult_found blockchain service that use the method POST
+
         :param dict_parameters: this parameter hava all parameters for use the service blockchain
         :type dict_parameters: dict
         :returns: this function return a response with format JSON
@@ -80,6 +81,7 @@ class Middleware:
     def close_block(self, dict_parameters):
         '''
         This function allows to the blockchain, close a block through a hash
+
         :param dict_parameters: the block which is going to close the opencloser
         :type dict_parameters: dict
         :returns: the hash of the block
@@ -91,6 +93,7 @@ class Middleware:
         '''
         This function allows to the user request a account from the class wallet in 
         Blockchain
+
         :param dict_parameters: the user name
         :type dict_parameters: dict
         :returns: the account of the user
@@ -102,6 +105,7 @@ class Middleware:
         '''
         This function allows to the developers to see the users in the Blockchain
         across the public ledger
+
         :returns: the list of the user accounts
         :rtype: dict
         '''
@@ -111,6 +115,7 @@ class Middleware:
         '''
         This function consume the service from Blockchain to
         make all the validations for the transaction, THIS SERVICE IS CONSUME FOR REGISTER
+
         :returns: the transaction for the block
         :rtype: dict
         '''
@@ -121,6 +126,7 @@ class Middleware:
         This function consume the service from register
         and allows to the blockchain add the transaction
         to the block
+        
         :returns: the transaction with all the validations
         :rtype: dict
         '''

@@ -16,6 +16,7 @@ class Services():
         '''
         This function is used to consume a web service, and return a response, no matter
         if the communication fails
+
         :param type_method: the method where is going to pass the communication (POST/GET)
         :type param: str
         :param uri: the url where is located the web service to consume
@@ -38,4 +39,10 @@ class Services():
     
     
     def service_close_block(self, dict_parameters):
+        '''
+        This function consume the web service of coordinator to close the block
+
+        :param dict_parameters: the POST content send to the coordinator for close the block
+        :type dict: dict
+        '''
         return self.consume_service('POST', config.open_closer, dict_parameters)

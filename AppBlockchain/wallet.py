@@ -8,7 +8,6 @@ transactions
 '''
 
 import hashlib
-from random import randint
 
 class Wallet():
     '''

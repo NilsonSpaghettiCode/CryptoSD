@@ -17,6 +17,7 @@ class Services():
         '''
         This function is used to consume a web service, and return a response, no matter
         if the communication fails
+
         :param type_method: the method where is going to pass the communication (POST/GET)
         :type param: str
         :param uri: the url where is located the web service to consume
@@ -43,6 +44,7 @@ class Services():
     def consume_consult_founds(self, dict_parameter):
         '''
         This function consume a service that consult blockchain of money of a wallet
+        
         :format_response: {'amount': int, 'exists': bool, 'request_wallet': str}
         :returns: return a dictionry
         :rtype: dict[str, Any]

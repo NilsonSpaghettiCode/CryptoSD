@@ -13,22 +13,16 @@ class Controller():
     This controller perform like the driver
     of the app code
     '''
-    def __init__(self):
-        pass
-
-    def __str__(self):
-        pass
-
     @staticmethod
     def consult_founds(dict_parameters):
         '''
         This function consume a service from Blockchain
         to get the money in a wallet, only if this wallet
         is valid
+
         :param account: the wallet of the user
         :type account: str
-        :returns: a dictionary with the account, founds in 
-        the wallet and the exist of the account
+        :returns: a dictionary with the account, founds in the wallet and the exist of the account
         :rtype: dict 
         '''
         req = Middleware()
@@ -40,6 +34,7 @@ class Controller():
         '''
         This function makes all the logic to connect the Blockchain
         with the OpenCloser component
+
         :param block: the block to close
         :type block: dict
         :returns: a dict with the response
@@ -54,6 +49,7 @@ class Controller():
         '''
         This function allows to the blockchain receive the transaction
         and add to the current block
+
         :returns: a dict with the response
         :rtype: dict
         '''
@@ -66,6 +62,7 @@ class Controller():
     def register_data(dict_parameters):
         '''
         This function register and validate the data
+
         :params dict_parameters:
         :type dict_parameters:
         :returns: return a dictionary with the valid transaction
@@ -93,6 +90,7 @@ class Controller():
         '''
         This static method, load services and consume the service from Blockchain
         where is going to storage the wallets of the users
+
         :param user: the name of the user 
         :type user: dict
         :returns: the wallet with the message
@@ -108,6 +106,7 @@ class Controller():
         '''
         This static method, load the services and consume the service from Blockchain
         to show all the users in the public ledger
+
         :returns: all the wallets
         :rtype: dict
         '''

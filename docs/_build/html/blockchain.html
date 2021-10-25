@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="OpenCloser component" href="opencloser.html" /><link rel="prev" title="Welcome to blockchain’s documentation!" href="index.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="OpenCloser component" href="opencloser.html" /><link rel="prev" title="Welcome to CryptoSD documentation!" href="index.html" />
 
     <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>Blockchain component - Blockchain simulator 1.0 documentation</title>
@@ -204,11 +204,15 @@ when the transactions has three records with valid money transferences</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="block.Block.add_hashes">
 <span class="sig-name descname"><span class="pre">add_hashes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hash_preview_t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0000000000000000000000000000000000000000000000000000000000000000'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hash_t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.add_hashes" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function add the hashes to the block
-:param hash_preview_t: the hash of the last block in the blockchain
-:type hash_preview_t: hash
-:param hash_t: the hash of the current block
-:type hash_t: hash</p>
+<dd><p>This function add the hashes to the block</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hash_preview_t</strong> (<em>hash</em>) – the hash of the last block in the blockchain</p></li>
+<li><p><strong>hash_t</strong> (<em>hash</em>) – the hash of the current block</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="block.Block.add_nonce">
@@ -219,9 +223,12 @@ a random int</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="block.Block.add_transaction">
 <span class="sig-name descname"><span class="pre">add_transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transaction</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#transaction.Transaction" title="transaction.Transaction"><span class="pre">transaction.Transaction</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.add_transaction" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function adds the transaction to the block
-:param transaction: receives the object Transaction
-:type transaction: Object&lt;Transaction&gt;</p>
+<dd><p>This function adds the transaction to the block</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>transaction</strong> (<em>Object&lt;Transaction&gt;</em>) – receives the object Transaction</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="block.Block.count_transactions">
@@ -276,11 +283,18 @@ and close the block, adding the nonce with the hashes, only if this is full.</p>
 <dt class="sig sig-object py" id="blockchain.Blockchain.consult_founds_wallet">
 <span class="sig-name descname"><span class="pre">consult_founds_wallet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#blockchain.Blockchain.consult_founds_wallet" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function allows to consult if a wallet address exists in
-the blockchain
-:param address: the address to consult
-:type address: str
-:returns: return a wallet dict 
-:rtype: dict</p>
+the blockchain</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>address</strong> (<em>str</em>) – the address to consult</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return a wallet dict</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.generate_wallet">
@@ -293,9 +307,12 @@ and a random hashed account
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.register_transaction_block">
 <span class="sig-name descname"><span class="pre">register_transaction_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transaction</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#transaction.Transaction" title="transaction.Transaction"><span class="pre">transaction.Transaction</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.register_transaction_block" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function register the object transaction in the current block
-:param transaction: the transaction to be added to the block
-:type transaction: Object&lt;Transaction&gt;</p>
+<dd><p>This function register the object transaction in the current block</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>transaction</strong> (<em>Object&lt;Transaction&gt;</em>) – the transaction to be added to the block</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.set_blockchain_hash">
@@ -308,17 +325,31 @@ each time a block is added
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.user_exists">
 <span class="sig-name descname"><span class="pre">user_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.user_exists" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function search a user in public ledger
-:param user: user to search
-:returns: a boolean if the user exists or no
-:rtype: boolean</p>
+<dd><p>This function search a user in public ledger</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user</strong> – user to search</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a boolean if the user exists or no</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.users">
 <span class="sig-name descname"><span class="pre">users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.users" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a dictionary of users on the public ledger
-:returns: the public ledger
-:rtype: list</p>
+<dd><p>Return a dictionary of users on the public ledger</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the public ledger</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.verify_block_length">

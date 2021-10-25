@@ -19,6 +19,7 @@ class Blockchain():
     def __init__(self):
         '''
         This is the constructor of the blockchain
+
         :param blockchain: receives a list of blocks
         :type blockchain: list
         :param amount: the amount of crypto money in the blockchain
@@ -53,6 +54,7 @@ class Blockchain():
     def register_transaction_block(self, transaction:Transaction):
         '''
         This function register the object transaction in the current block
+
         :param transaction: the transaction to be added to the block
         :type transaction: Object<Transaction>
         '''
@@ -128,6 +130,7 @@ class Blockchain():
         '''
         This function allows to consult if a wallet address exists in
         the blockchain
+
         :param address: the address to consult
         :type address: str
         :returns: return a wallet dict 
@@ -171,6 +174,7 @@ class Blockchain():
     def user_exists(self, user):
         '''
         This function search a user in public ledger
+
         :param user: user to search
         :returns: a boolean if the user exists or no
         :rtype: boolean
@@ -200,6 +204,7 @@ class Blockchain():
     def users(self):
         '''
         Return a dictionary of users on the public ledger
+        
         :returns: the public ledger
         :rtype: list
         '''

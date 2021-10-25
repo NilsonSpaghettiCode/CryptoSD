@@ -22,6 +22,7 @@ class Register():
         '''
         This function redirect to the consume for all the required
         web service to validate the transaction
+        
         :param wallet_from: the wallet who sends the money
         :type wallet_from: str
         :param wallet_to: the wallet who receives the money

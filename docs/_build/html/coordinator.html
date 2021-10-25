@@ -277,51 +277,84 @@ coordinate all the functions of CryptoSD:Blockchain</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.close_block">
 <span class="sig-name descname"><span class="pre">close_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.close_block" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function allows to the blockchain, close a block through a hash
-:param dict_parameters: the block which is going to close the opencloser
-:type dict_parameters: dict
-:returns: the hash of the block
-:rtype: dict</p>
+<dd><p>This function allows to the blockchain, close a block through a hash</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dict_parameters</strong> (<em>dict</em>) – the block which is going to close the opencloser</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the hash of the block</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.consult_found_block_chain_service">
 <span class="sig-name descname"><span class="pre">consult_found_block_chain_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.consult_found_block_chain_service" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function allows to consume consult_found blockchain service that use the method POST
-:param dict_parameters: this parameter hava all parameters for use the service blockchain
-:type dict_parameters: dict
-:returns: this function return a response with format JSON
-:rtype: dict[str, Any]</p>
+<dd><p>This function allows to consume consult_found blockchain service that use the method POST</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dict_parameters</strong> (<em>dict</em>) – this parameter hava all parameters for use the service blockchain</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>this function return a response with format JSON</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict[str, Any]</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.consume_register_data">
 <span class="sig-name descname"><span class="pre">consume_register_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.consume_register_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function consume the service from Blockchain to
-make all the validations for the transaction, THIS SERVICE IS CONSUME FOR REGISTER
-:returns: the transaction for the block
-:rtype: dict</p>
+make all the validations for the transaction, THIS SERVICE IS CONSUME FOR REGISTER</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the transaction for the block</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.consume_register_transaction">
 <span class="sig-name descname"><span class="pre">consume_register_transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.consume_register_transaction" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function consume the service from register
 and allows to the blockchain add the transaction
-to the block
-:returns: the transaction with all the validations
-:rtype: dict</p>
+to the block</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the transaction with all the validations</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.consume_service">
 <span class="sig-name descname"><span class="pre">consume_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict_parameter</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.consume_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function is used to consume a web service, and return a response, no matter
-if the communication fails
-:param type_method: the method where is going to pass the communication (POST/GET)
-:type param: str
-:param uri: the url where is located the web service to consume
-:type uri: str
-:param dict_parameter: the content of the payload
-:type dict_parameter: dict
-:returns: returns a custom dict with the url, status and content. The “Any” return is a JSON content
-:rtype: dict[str, Any]</p>
+if the communication fails</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type_method</strong> – the method where is going to pass the communication (POST/GET)</p></li>
+<li><p><strong>uri</strong> (<em>str</em>) – the url where is located the web service to consume</p></li>
+<li><p><strong>dict_parameter</strong> (<em>dict</em>) – the content of the payload</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns a custom dict with the url, status and content. The “Any” return is a JSON content</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict[str, Any]</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.get_block_chain">
@@ -333,19 +366,32 @@ debug the code</p>
 <dt class="sig sig-object py" id="middleware.Middleware.get_user_list">
 <span class="sig-name descname"><span class="pre">get_user_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.get_user_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function allows to the developers to see the users in the Blockchain
-across the public ledger
-:returns: the list of the user accounts
-:rtype: dict</p>
+across the public ledger</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the list of the user accounts</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.get_wallet">
 <span class="sig-name descname"><span class="pre">get_wallet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#middleware.Middleware.get_wallet" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function allows to the user request a account from the class wallet in 
-Blockchain
-:param dict_parameters: the user name
-:type dict_parameters: dict
-:returns: the account of the user
-:rtype: dict</p>
+Blockchain</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dict_parameters</strong> (<em>dict</em>) – the user name</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the account of the user</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="middleware.Middleware.load_services">
@@ -368,50 +414,82 @@ of the app code</p>
 <dt class="sig sig-object py" id="controller.Controller.close_block">
 <em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">close_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.close_block" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function makes all the logic to connect the Blockchain
-with the OpenCloser component
-:param block: the block to close
-:type block: dict
-:returns: a dict with the response
-:rtype: dict</p>
+with the OpenCloser component</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>block</strong> (<em>dict</em>) – the block to close</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a dict with the response</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="controller.Controller.consult_founds">
 <em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">consult_founds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.consult_founds" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function consume a service from Blockchain
 to get the money in a wallet, only if this wallet
-is valid
-:param account: the wallet of the user
-:type account: str
-:returns: a dictionary with the account, founds in 
-the wallet and the exist of the account
-:rtype: dict</p>
+is valid</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>account</strong> (<em>str</em>) – the wallet of the user</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a dictionary with the account, founds in the wallet and the exist of the account</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="controller.Controller.create_user">
 <em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">create_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.create_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>This static method, load services and consume the service from Blockchain
-where is going to storage the wallets of the users
-:param user: the name of the user 
-:type user: dict
-:returns: the wallet with the message
-:rtype: dict</p>
+where is going to storage the wallets of the users</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user</strong> (<em>dict</em>) – the name of the user</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the wallet with the message</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="controller.Controller.register_data">
 <em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">register_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.register_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function register and validate the data
-:params dict_parameters:
-:type dict_parameters:
-:returns: return a dictionary with the valid transaction
-:rtype: dict</p>
+<dd><p>This function register and validate the data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params dict_parameters</dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return a dictionary with the valid transaction</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="controller.Controller.register_transaction">
 <em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">register_transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_transaction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.register_transaction" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function allows to the blockchain receive the transaction
-and add to the current block
-:returns: a dict with the response
-:rtype: dict</p>
+and add to the current block</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a dict with the response</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="controller.Controller.show_block_chain">
@@ -430,9 +508,15 @@ and add to the current block
 <dt class="sig sig-object py" id="controller.Controller.show_wallets">
 <em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">show_wallets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controller.Controller.show_wallets" title="Permalink to this definition">¶</a></dt>
 <dd><p>This static method, load the services and consume the service from Blockchain
-to show all the users in the public ledger
-:returns: all the wallets
-:rtype: dict</p>
+to show all the users in the public ledger</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>all the wallets</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 </dd></dl>
 </section>

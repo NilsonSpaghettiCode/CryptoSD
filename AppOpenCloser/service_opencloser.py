@@ -6,7 +6,7 @@ This module contains the web service function
 for OpenCloser
 '''
 
-from flask import Flask, json, jsonify, request
+from flask import Flask, jsonify, request
 from opencloser import OpenCloser
 app = Flask(__name__)
 
