@@ -24,6 +24,9 @@ class Wallet():
         This function generated a number account random
         using a function hash with a especial concat for valid
         the form
+
+        :returns: return a wallet 
+        :rtype: str
         '''     
         wallet = self.counter
         encrypt = hashlib.md5() 
