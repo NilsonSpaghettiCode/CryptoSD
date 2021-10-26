@@ -212,6 +212,12 @@ when the transactions has three records with valid money transferences</p>
 <li><p><strong>hash_t</strong> (<em>hash</em>) – the hash of the current block</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>No ruturns</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
 </dl>
 </dd></dl>
 <dl class="py method">
@@ -219,6 +225,14 @@ when the transactions has three records with valid money transferences</p>
 <span class="sig-name descname"><span class="pre">add_nonce</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.add_nonce" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function add the nonce of the block
 a random int</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>No ruturns</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="block.Block.add_transaction">
@@ -228,6 +242,12 @@ a random int</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>transaction</strong> (<em>Object&lt;Transaction&gt;</em>) – receives the object Transaction</p>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>No ruturns</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
 </dl>
 </dd></dl>
 <dl class="py method">
@@ -235,12 +255,28 @@ a random int</p>
 <span class="sig-name descname"><span class="pre">count_transactions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.count_transactions" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function counts the length of transactions in the
 block</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>returns the count transactions of block actua</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="block.Block.get_transaction_list">
 <span class="sig-name descname"><span class="pre">get_transaction_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#block.Block.get_transaction_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function return the list of transactions
 in the block</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>returns a transactions list of block actual</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
 </dd></dl>
 </dd></dl>
 </section>
@@ -274,18 +310,42 @@ the blockchain</p>
 <span class="sig-name descname"><span class="pre">add_new_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.add_new_block" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function reset the instance of block, where is going to write the
 transactions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>No returns</p>
+</dd>
+<dt class="field-even">Rtpye</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="blockchain.Blockchain.calculate_founds_blockchain">
-<span class="sig-name descname"><span class="pre">calculate_founds_blockchain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wallet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.calculate_founds_blockchain" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="blockchain.Blockchain.calculate_funds_blockchain">
+<span class="sig-name descname"><span class="pre">calculate_funds_blockchain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wallet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.calculate_funds_blockchain" title="Permalink to this definition">¶</a></dt>
 <dd><p>This functions calculate the current founds in the blockchain
 of a specific wallet throught the transactions of each block</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>returns funds of a wallet</p>
+</dd>
+<dt class="field-even">Rtpye</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.close_block">
 <span class="sig-name descname"><span class="pre">close_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.close_block" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function receives a response from OpenCloser across Coordinator
 and close the block, adding the nonce with the hashes, only if this is full.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>No returns</p>
+</dd>
+<dt class="field-even">Rtpye</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.consult_founds_wallet">
@@ -329,6 +389,12 @@ and a random hashed account</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>transaction</strong> (<em>Object&lt;Transaction&gt;</em>) – the transaction to be added to the block</p>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>No returns</p>
+</dd>
+<dt class="field-odd">Rtpye</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
 </dl>
 </dd></dl>
 <dl class="py method">
@@ -338,6 +404,14 @@ and a random hashed account</p>
 each time a block is added
 :param hash_blockchain: the hash of the list of blocks in the blockchain
 :type hash_blockchain: hash</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>No returns</p>
+</dd>
+<dt class="field-even">Rtpye</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.user_exists">
@@ -372,6 +446,14 @@ each time a block is added
 <dt class="sig sig-object py" id="blockchain.Blockchain.verify_block_length">
 <span class="sig-name descname"><span class="pre">verify_block_length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.verify_block_length" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function verify the block length</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>returns true if size equals a 3</p>
+</dd>
+<dt class="field-even">Rtpye</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 </dd></dl>
 </section>
@@ -503,16 +585,40 @@ is going to be part of the blockchain</p>
 <dt class="sig sig-object py" id="transaction.Transaction.get_amount">
 <span class="sig-name descname"><span class="pre">get_amount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transaction.Transaction.get_amount" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function allows to get the money of a transaction</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>returns a int with amount</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="transaction.Transaction.get_from_u">
 <span class="sig-name descname"><span class="pre">get_from_u</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transaction.Transaction.get_from_u" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function allows to get the user who sends the money</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>returns user who sends the money</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="transaction.Transaction.get_to_u">
 <span class="sig-name descname"><span class="pre">get_to_u</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#transaction.Transaction.get_to_u" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function allows to get the user who receives the money</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>returns user who receives the money</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 </dd></dl>
 </section>
@@ -531,6 +637,14 @@ transactions</p>
 <dd><p>This function generated a number account random
 using a function hash with a especial concat for valid
 the form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>return a wallet</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 </dd></dl>
 </section>
