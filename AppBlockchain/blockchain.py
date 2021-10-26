@@ -48,6 +48,9 @@ class Blockchain():
         each time a block is added
         :param hash_blockchain: the hash of the list of blocks in the blockchain
         :type hash_blockchain: hash
+
+        :returns: No returns
+        :rtpye: None
         '''
         self.hash_blockchain = hash_blockchain
     
@@ -57,6 +60,9 @@ class Blockchain():
 
         :param transaction: the transaction to be added to the block
         :type transaction: Object<Transaction>
+        
+        :returns: No returns
+        :rtpye: None
         '''
         response = {'status_transaction': 0,
                     'Transaction': transaction.__dict__,
@@ -74,6 +80,9 @@ class Blockchain():
     def verify_block_length(self):
         '''
         This function verify the block length
+
+        :returns: returns true if size equals a 3
+        :rtpye: bool
         '''
        
         return (len(self.block_instanted.transactions) == 3)
@@ -82,10 +91,13 @@ class Blockchain():
         '''
         This function receives a response from OpenCloser across Coordinator
         and close the block, adding the nonce with the hashes, only if this is full. 
+        
+        :returns: No returns
+        :rtpye: None
         '''
         
         request_tempo = self.block_instanted.__str__()
-        jsonify()
+        #jsonify()
         print("Enviando",request_tempo)
         services = Services()
         hash_actual = services.service_close_block(request_tempo)
@@ -103,15 +115,22 @@ class Blockchain():
         '''
         This function reset the instance of block, where is going to write the
         transactions 
+
+        :returns: No returns
+        :rtpye: None
         '''
         self.blockchain.append(self.block_instanted)
         self.block_instanted = Block()
         self.block_instanted.transactions = []
     
-    def calculate_founds_blockchain(self, wallet):
+    def calculate_funds_blockchain(self, wallet):
         '''
         This functions calculate the current founds in the blockchain
         of a specific wallet throught the transactions of each block
+        
+        :returns: returns funds of a wallet
+        :rtpye: int
+    
         '''
         amount_wallet = int(0)
         for block in self.blockchain:
@@ -145,7 +164,7 @@ class Blockchain():
                    
         if self.account_exists(address):
             response['exists'] = True
-            amount = self.calculate_founds_blockchain(address)
+            amount = self.calculate_funds_blockchain(address)
             response['amount'] = amount
         
         return response
