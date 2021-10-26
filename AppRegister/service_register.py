@@ -19,7 +19,25 @@ def register_transaction():
     '''
     This web services allows to process the request
     for validate the transactions with type method POST
-    url: 'http://127.0.0.1:5004/register_transaction'
+
+    .. parsed-literal::
+        # validate for register the data
+        curl http://localhost:5202/register_transaction
+
+    .. code-block:: json
+
+        {
+        "transaction_valid": false,
+        "error": "No error",
+        "transaction_done": false,
+        "transaction": {
+                "from_wallet": "wallet_from",
+                "to_wallet": "wallet_to",
+                "amount": "amount"
+                    }
+                        
+        }
+
     '''
     return Register.register_transaction(request.form['from_wallet'],request.form['to_wallet'],request.form['amount'])
 

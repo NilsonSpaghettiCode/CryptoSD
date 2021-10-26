@@ -18,7 +18,24 @@ def register_data():
     This web service add the transaction to the
     block, and then when the block is full, the block is 
     aggregated to the blockchain
-    url: http://127.0.0.1:5002/register_data/
+
+    .. parsed-literal::
+        # show Blockchain
+        curl http://localhost:5201/register_data/
+
+    .. code-block:: json
+
+        {
+        "status_transaction": 0,
+        "Transaction": [
+                    {
+                    "from_u": "account_send",
+                    "to_u": "account_receive",
+                    "amount": "amount"
+                    }
+                ]
+        }
+
     '''
     if(request.method == 'POST'):
         new_transaction = Transaction(request.form['from_wallet'],request.form['to_wallet'],request.form['amount'])
@@ -28,7 +45,18 @@ def register_data():
 def block_chain():
     '''
     This web service show the blockchain
-    url: http://127.0.0.1:5002/
+
+    .. parsed-literal::
+        # show Blockchain
+        curl http://localhost:5201/
+
+    .. code-block:: json
+
+        {
+        "Cantidad": 0,
+        "blockchain": []
+        }
+
     '''
     return blockchain_s.__str__()
 
@@ -38,7 +66,19 @@ def consult_address():
     '''
     This web service consult with the blockchain the
     address, if exists in the blockchain
-    url: http://127.0.0.1:5002/consult_address
+
+    .. parsed-literal::
+        # show the account amount if it has funds in the blockchain
+        curl http://localhost:5201/consult_address
+
+    .. code-block:: json
+
+        {
+        "amount": 0,
+        "exists": false,
+        "request_wallet": "address"
+        }
+
     '''
 
     if (request.method == 'POST'):
@@ -49,7 +89,19 @@ def new_account():
     '''
     This web service create a new account for a user, this service return
     a number of wallet and that has
-    url: http://127.0.0.1:5002/new_account
+    
+    .. parsed-literal::
+        # create the wallet account
+        curl http://localhost:5201/new_account
+
+    .. code-block:: json
+
+        {
+        "error": "User exists",
+        "exist": true,
+        "user": "name_user"
+        }
+
     '''
     response_user = blockchain_s.generate_wallet(request.form['name_user'])
     return jsonify(response_user)
@@ -59,7 +111,21 @@ def users():
     '''
     This web service return a list of user in the public ledger with format json
 
-    url: http://127.0.0.1:5002/users
+    .. parsed-literal::
+        # show the user list
+        curl http://localhost:5201/users
+
+    .. code-block:: json
+
+        {
+                [
+            {
+            "user": "name_user",
+            "account": "new_account"
+            }
+                ]
+        }
+
     '''
 
     return  jsonify(blockchain_s.users())

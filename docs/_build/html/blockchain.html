@@ -256,10 +256,18 @@ the blockchain</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.account_exists">
 <span class="sig-name descname"><span class="pre">account_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">account</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.account_exists" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function search a account in public ledger
-:param account: account to search
-:returns: a boolean if the account exists or no
-:rtype: boolean</p>
+<dd><p>This function search a account in public ledger</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>account</strong> – account to search</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a boolean if the account exists or no</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.add_new_block">
@@ -300,9 +308,18 @@ the blockchain</p>
 <dt class="sig sig-object py" id="blockchain.Blockchain.generate_wallet">
 <span class="sig-name descname"><span class="pre">generate_wallet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name_user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blockchain.Blockchain.generate_wallet" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function create the wallet of the user with a name
-and a random hashed account
-:param name_user: the name of the user account
-:type name_user: str</p>
+and a random hashed account</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name_user</strong> (<em>str</em>) – the name of the user account</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the wallet creation response</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="blockchain.Blockchain.register_transaction_block">
@@ -334,7 +351,7 @@ each time a block is added
 <dd class="field-even"><p>a boolean if the user exists or no</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>boolean</p>
+<dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -375,30 +392,74 @@ of the blockchain app</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_blockchain.block_chain">
 <span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">block_chain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.block_chain" title="Permalink to this definition">¶</a></dt>
-<dd><p>This web service show the blockchain
-url: <a class="reference external" href="http://127.0.0.1:5002/">http://127.0.0.1:5002/</a></p>
+<dd><p>This web service show the blockchain</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># show Blockchain</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5201</span><span class="o">/</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">"Cantidad"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+<span class="nt">"blockchain"</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_blockchain.consult_address">
 <span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">consult_address</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.consult_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>This web service consult with the blockchain the
-address, if exists in the blockchain
-url: <a class="reference external" href="http://127.0.0.1:5002/consult_address">http://127.0.0.1:5002/consult_address</a></p>
+address, if exists in the blockchain</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># show the account amount if it has funds in the blockchain</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5201</span><span class="o">/</span><span class="n">consult_address</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">"amount"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+<span class="nt">"exists"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+<span class="nt">"request_wallet"</span><span class="p">:</span> <span class="s2">"address"</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_blockchain.new_account">
 <span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">new_account</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.new_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>This web service create a new account for a user, this service return
-a number of wallet and that has
-url: <a class="reference external" href="http://127.0.0.1:5002/new_account">http://127.0.0.1:5002/new_account</a></p>
+a number of wallet and that has</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># create the wallet account</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5201</span><span class="o">/</span><span class="n">new_account</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">"error"</span><span class="p">:</span> <span class="s2">"User exists"</span><span class="p">,</span>
+<span class="nt">"exist"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="nt">"user"</span><span class="p">:</span> <span class="s2">"name_user"</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_blockchain.register_data">
 <span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">register_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.register_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>This web service add the transaction to the
 block, and then when the block is full, the block is 
-aggregated to the blockchain
-url: <a class="reference external" href="http://127.0.0.1:5002/register_data/">http://127.0.0.1:5002/register_data/</a></p>
+aggregated to the blockchain</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># show Blockchain</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5201</span><span class="o">/</span><span class="n">register_data</span><span class="o">/</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">"status_transaction"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+<span class="nt">"Transaction"</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+            <span class="nt">"from_u"</span><span class="p">:</span> <span class="s2">"account_send"</span><span class="p">,</span>
+            <span class="nt">"to_u"</span><span class="p">:</span> <span class="s2">"account_receive"</span><span class="p">,</span>
+            <span class="nt">"amount"</span><span class="p">:</span> <span class="s2">"amount"</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_blockchain.run_services_blockchain">
@@ -409,7 +470,20 @@ url: <a class="reference external" href="http://127.0.0.1:5002/register_data/">h
 <dt class="sig sig-object py" id="service_blockchain.users">
 <span class="sig-prename descclassname"><span class="pre">service_blockchain.</span></span><span class="sig-name descname"><span class="pre">users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_blockchain.users" title="Permalink to this definition">¶</a></dt>
 <dd><p>This web service return a list of user in the public ledger with format json</p>
-<p>url: <a class="reference external" href="http://127.0.0.1:5002/users">http://127.0.0.1:5002/users</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># show the user list</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5201</span><span class="o">/</span><span class="n">users</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+        <span class="p">[</span>
+    <span class="p">{</span>
+    <span class="nt">"user"</span><span class="p">:</span> <span class="s2">"name_user"</span><span class="p">,</span>
+    <span class="nt">"account"</span><span class="p">:</span> <span class="s2">"new_account"</span>
+    <span class="p">}</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 </section>
 <span class="target" id="module-consume_service_blockchain"></span><section id="blockchain-services-class">

@@ -155,8 +155,11 @@ class Blockchain():
         '''
         This function create the wallet of the user with a name
         and a random hashed account
+
         :param name_user: the name of the user account
         :type name_user: str
+        :returns: the wallet creation response
+        :rtype: dict
         '''
         response = {'exist':True, 'error':'User exists', 'user': name_user}
         
@@ -177,7 +180,7 @@ class Blockchain():
 
         :param user: user to search
         :returns: a boolean if the user exists or no
-        :rtype: boolean
+        :rtype: bool
         '''
         exists = False
         for user_account in self.public_ledger:
@@ -190,9 +193,10 @@ class Blockchain():
     def account_exists(self, account):
         '''
         This function search a account in public ledger
+
         :param account: account to search
         :returns: a boolean if the account exists or no
-        :rtype: boolean
+        :rtype: bool
         '''
         exists = False
 

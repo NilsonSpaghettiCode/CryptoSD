@@ -240,8 +240,16 @@ for OpenCloser</p>
 <dt class="sig sig-object py" id="service_opencloser.closer_block">
 <span class="sig-prename descclassname"><span class="pre">service_opencloser.</span></span><span class="sig-name descname"><span class="pre">closer_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_opencloser.closer_block" title="Permalink to this definition">¶</a></dt>
 <dd><p>The web service of OpenCloser hashed the block
-for blockchain and allows to close it
-url:  <a class="reference external" href="http://127.0.0.1:5003/closer_block">http://127.0.0.1:5003/closer_block</a></p>
+for blockchain and allows to close it</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># close the block</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5203</span><span class="o">/</span><span class="n">closer_block</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">"hash_of_the_block"</span><span class="p">:</span> <span class="s2">"hash_block"</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_opencloser.run_service_opencloser">

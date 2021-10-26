@@ -15,7 +15,18 @@ def closer_block():
     '''
     The web service of OpenCloser hashed the block
     for blockchain and allows to close it
-    url:  http://127.0.0.1:5003/closer_block
+    
+    
+    .. parsed-literal::
+        # close the block
+        curl http://localhost:5203/closer_block
+
+    .. code-block:: json
+
+        {
+        "hash_of_the_block": "hash_block"
+        }
+
     '''
     hash_block = OpenCloser.hashBlock(request.form)
     result = {'hash_of_the_block': hash_block}

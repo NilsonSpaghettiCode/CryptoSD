@@ -246,8 +246,24 @@ for register</p>
 <dt class="sig sig-object py" id="service_register.register_transaction">
 <span class="sig-prename descclassname"><span class="pre">service_register.</span></span><span class="sig-name descname"><span class="pre">register_transaction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_register.register_transaction" title="Permalink to this definition">¶</a></dt>
 <dd><p>This web services allows to process the request
-for validate the transactions with type method POST
-url: ‘<a class="reference external" href="http://127.0.0.1:5004/register_transaction">http://127.0.0.1:5004/register_transaction</a>’</p>
+for validate the transactions with type method POST</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># validate for register the data</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5202</span><span class="o">/</span><span class="n">register_transaction</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">"transaction_valid"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+<span class="nt">"error"</span><span class="p">:</span> <span class="s2">"No error"</span><span class="p">,</span>
+<span class="nt">"transaction_done"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+<span class="nt">"transaction"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"from_wallet"</span><span class="p">:</span> <span class="s2">"wallet_from"</span><span class="p">,</span>
+        <span class="nt">"to_wallet"</span><span class="p">:</span> <span class="s2">"wallet_to"</span><span class="p">,</span>
+        <span class="nt">"amount"</span><span class="p">:</span> <span class="s2">"amount"</span>
+            <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_register.run_service_register">

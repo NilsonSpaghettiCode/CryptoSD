@@ -196,22 +196,65 @@
 <dt class="sig sig-object py" id="service_coordinator.close_block">
 <span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">close_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.close_block" title="Permalink to this definition">¶</a></dt>
 <dd><p>This web service is for the blockchain, when a block is full
-the blockchain request this web service
-url: <a class="reference external" href="http://127.0.0.1:5001/close_block">http://127.0.0.1:5001/close_block</a></p>
+the blockchain request this web service</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># coordinator for close block</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5200</span><span class="o">/</span><span class="n">close_block</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">"active"</span><span class="p">:</span> <span class="kc">false</span>
+<span class="nt">"url"</span><span class="p">:</span> <span class="s2">"uri"</span><span class="p">,</span>
+<span class="nt">"status"</span><span class="p">:</span> <span class="mi">503</span><span class="p">,</span>
+<span class="nt">"content"</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"hash_of_the_block"</span><span class="p">:</span> <span class="s2">"hash_block"</span>
+            <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.consult_founds">
 <span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">consult_founds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.consult_founds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Web service for the client, that execute the required proccess,
 calling all the correspond web service from the others components
-to get the user founds in the wallet
-url: <a class="reference external" href="http://127.0.0.1:5001/consult_founds">http://127.0.0.1:5001/consult_founds</a></p>
+to get the user founds in the wallet</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># coordinator for consult_founds</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5200</span><span class="o">/</span><span class="n">consult_founds</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">"active"</span><span class="p">:</span> <span class="kc">false</span>
+<span class="nt">"url"</span><span class="p">:</span> <span class="s2">"uri"</span><span class="p">,</span>
+<span class="nt">"status"</span><span class="p">:</span> <span class="mi">503</span><span class="p">,</span>
+<span class="nt">"content"</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">"amount"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">"exists"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">"request_wallet"</span><span class="p">:</span> <span class="s2">"address"</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.create_wallet">
 <span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">create_wallet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.create_wallet" title="Permalink to this definition">¶</a></dt>
-<dd><p>This web service create the wallet of the user
-url: <a class="reference external" href="http://127.0.0.1:5001/create_wallet">http://127.0.0.1:5001/create_wallet</a></p>
+<dd><p>This web service create the wallet of the user</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># coordinator for create wallet</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5200</span><span class="o">/</span><span class="n">create_wallet</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">"active"</span><span class="p">:</span> <span class="kc">false</span>
+<span class="nt">"url"</span><span class="p">:</span> <span class="s2">"uri"</span><span class="p">,</span>
+<span class="nt">"status"</span><span class="p">:</span> <span class="mi">503</span><span class="p">,</span>
+<span class="nt">"content"</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">"error"</span><span class="p">:</span> <span class="s2">"User exists"</span><span class="p">,</span>
+    <span class="nt">"exist"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">"user"</span><span class="p">:</span> <span class="s2">"name_user"</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.get_something">
@@ -223,8 +266,29 @@ url: <a class="reference external" href="http://127.0.0.1:5001/create_wallet">ht
 <span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">register_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.register_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>This web service is for valid the transaction
 which is going to the block, that means is the
-in carge of certificate the transactions
-url: <a class="reference external" href="http://127.0.0.1:5001/register_data">http://127.0.0.1:5001/register_data</a></p>
+in carge of certificate the transactions</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># coordinator for register data</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5200</span><span class="o">/</span><span class="n">register_data</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">"active"</span><span class="p">:</span> <span class="kc">false</span>
+<span class="nt">"url"</span><span class="p">:</span> <span class="s2">"uri"</span><span class="p">,</span>
+<span class="nt">"status"</span><span class="p">:</span> <span class="mi">503</span><span class="p">,</span>
+<span class="nt">"content"</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">"transaction_valid"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">"error"</span><span class="p">:</span> <span class="s2">"No error"</span><span class="p">,</span>
+    <span class="nt">"transaction_done"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">"transaction"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">"from_wallet"</span><span class="p">:</span> <span class="s2">"wallet_from"</span><span class="p">,</span>
+            <span class="nt">"to_wallet"</span><span class="p">:</span> <span class="s2">"wallet_to"</span><span class="p">,</span>
+            <span class="nt">"amount"</span><span class="p">:</span> <span class="s2">"amount"</span>
+                    <span class="p">}</span>
+
+            <span class="p">}</span> 
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.run_service_coordinator">
@@ -243,23 +307,75 @@ allow comunicate diferents services</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.show_block_chain">
 <span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">show_block_chain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.show_block_chain" title="Permalink to this definition">¶</a></dt>
-<dd><p>This web service shows the blockchain
-url: <a class="reference external" href="http://127.0.0.1:5001/show_block_chain">http://127.0.0.1:5001/show_block_chain</a></p>
+<dd><p>This web service shows the blockchain</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># coordinator for show blockchain</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5200</span><span class="o">/</span><span class="n">show_block_chain</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">"active"</span><span class="p">:</span> <span class="kc">false</span>
+<span class="nt">"url"</span><span class="p">:</span> <span class="s2">"uri"</span><span class="p">,</span>
+<span class="nt">"status"</span><span class="p">:</span> <span class="mi">503</span><span class="p">,</span>
+<span class="nt">"content"</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"Cantidad"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">"blockchain"</span><span class="p">:</span> <span class="p">[]</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.show_users">
 <span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">show_users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.show_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>This web service has the purpose of debugging code,
-allows to show all the wallets in the public ledger
-url: <a class="reference external" href="http://127.0.0.1:5001/show_users">http://127.0.0.1:5001/show_users</a></p>
+allows to show all the wallets in the public ledger</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># coordinator for show users</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5200</span><span class="o">/</span><span class="n">show_users</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">"active"</span><span class="p">:</span> <span class="kc">false</span>
+<span class="nt">"url"</span><span class="p">:</span> <span class="s2">"uri"</span><span class="p">,</span>
+<span class="nt">"status"</span><span class="p">:</span> <span class="mi">503</span><span class="p">,</span>
+<span class="nt">"content"</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="p">[</span>
+    <span class="p">{</span>
+    <span class="nt">"user"</span><span class="p">:</span> <span class="s2">"name_user"</span><span class="p">,</span>
+    <span class="nt">"account"</span><span class="p">:</span> <span class="s2">"new_account"</span>
+    <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="service_coordinator.transaction_register">
 <span class="sig-prename descclassname"><span class="pre">service_coordinator.</span></span><span class="sig-name descname"><span class="pre">transaction_register</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#service_coordinator.transaction_register" title="Permalink to this definition">¶</a></dt>
 <dd><p>Web service for the client, that execute all the required proccess
 to valid a transaction and add to the block the new transaction,
-before add the complete block to the blockchain
-url: <a class="reference external" href="http://127.0.0.1:5001/register_transaction">http://127.0.0.1:5001/register_transaction</a></p>
+before add the complete block to the blockchain</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># coordinator for transaction register</span>
+<span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5200</span><span class="o">/</span><span class="n">register_transaction</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">"active"</span><span class="p">:</span> <span class="kc">false</span>
+<span class="nt">"url"</span><span class="p">:</span> <span class="s2">"uri"</span><span class="p">,</span>
+<span class="nt">"status"</span><span class="p">:</span> <span class="mi">503</span><span class="p">,</span>
+<span class="nt">"content"</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">"status_transaction"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">"Transaction"</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+            <span class="nt">"from_u"</span><span class="p">:</span> <span class="s2">"account_send"</span><span class="p">,</span>
+            <span class="nt">"to_u"</span><span class="p">:</span> <span class="s2">"account_receive"</span><span class="p">,</span>
+            <span class="nt">"amount"</span><span class="p">:</span> <span class="s2">"amount"</span>
+            <span class="p">}</span>
+                <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 </section>
 <span class="target" id="module-config_coordinator"></span><section id="coordinator-config">
