@@ -33,17 +33,26 @@ class Transaction():
     def get_amount(self):
         '''
         This function allows to get the money of a transaction
+        
+        :returns: returns a int with amount
+        :rtype: int
         '''
         return self.amount
 
     def get_from_u(self):
         '''
         This function allows to get the user who sends the money
+        
+        :returns: returns user who sends the money
+        :rtype: str
         '''
         return self.from_u
         
     def get_to_u(self):
         '''
         This function allows to get the user who receives the money
+        
+        :returns: returns user who receives the money
+        :rtype: str
         '''
         return self.to_u
