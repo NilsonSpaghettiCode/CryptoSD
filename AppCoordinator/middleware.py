@@ -75,6 +75,8 @@ class Middleware:
         '''
         This function allows to the user to see the blockchain, this function has the purpose of
         debug the code
+        :returns: return a block_chain
+        :rtype: dict
         '''
         return self.consume_service('GET', self.web_service_url['blockchain_show'])
 
