@@ -56,6 +56,9 @@ class Block():
 
         :param transaction: receives the object Transaction
         :type transaction: Object<Transaction>
+        
+        :returns: No ruturns
+        :rtype: None
         '''
         
         self.transactions.append(transaction)
@@ -64,6 +67,9 @@ class Block():
         '''
         This function counts the length of transactions in the
         block
+        
+        :returns: returns the count transactions of block actua
+        :rtype: int
         '''
         return len(self.transactions)
 
@@ -75,6 +81,9 @@ class Block():
         :type hash_preview_t: hash
         :param hash_t: the hash of the current block
         :type hash_t: hash
+        
+        :returns: No ruturns
+        :rtype: None
         '''
         self.hash_preview = hash_preview_t
         self.hash = hash_t
@@ -83,12 +92,19 @@ class Block():
         '''
         This function add the nonce of the block
         a random int
-                '''
+
+        :returns: No ruturns
+        :rtype: None
+        
+        '''
         self.nonce = randint(1, 1000)
 
     def get_transaction_list(self):
         '''
         This function return the list of transactions
         in the block
+
+        :returns: returns a transactions list of block actual
+        :rtype: list
         '''    
         return self.transactions
